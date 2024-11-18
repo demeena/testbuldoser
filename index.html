@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шапка сайта</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo-dark 1.png" alt="Логотип">
+      </div>
+      <nav class="nav">
+        <a href="#about">О нас</a>
+        <a href="#features">Характеристики</a>
+        <a href="#leasing">Лизинг</a>
+        <a href="#delivery">Доставка</a>
+      </nav>
+      <div class="contact">
+        <img src="img/call 2.png" alt="Телефон">
+        <a href="tel:+74993982380">+7 (499) 398-23-80</a>
+      </div>
+      <div class="mobile-menu">
+        <div class="burger"></div>
+        <div class="burger"></div>
+        <div class="burger"></div>
+      </div>
+    </div>
+      <div class="dropdown-menu">
+        <button class="close-menu-btn">&times;</button>
+        <a href="#about">О нас</a>
+        <a href="#features">Характеристики</a>
+        <a href="#leasing">Лизинг</a>
+        <a href="#delivery">Доставка</a>
+        <a href="tel:+74993982380">+7 (499) 398-23-80</a>
+      </div>
+  </header> 
+
+  <div class="banner">
+    <div class="banner_title">
+      <p class="title_banner_title">Бульдозер</p>
+      <p class="banner_title_text">
+        ZTM AST<br>
+        <span class="banner_title_text" >RSD16</span>
+  </div>
+    <img src="img/Rectangle 2.png" alt="Левая картинка" class="overlay-left">
+    <img src="img/buldozer 1.png" alt="Булдозер" class="overlay-top">
+  </div>
+
+  <div class="call_to_action">
+    <div class="call_to_action_wrapper ">
+      <div class="call_to_action_title">
+        <h1>ВЫГОДА</h1>
+        <p>ДО 1 000 000 руб.</p>
+      </div>
+      <div class="form_action">
+        <button id="openModal" class="btn">Получить лучшую цену</button>
+        <p>Оставьте заявку и получите лучшее</p>
+          <p> предложение всего за 15 минут</p>
+      </div>
+    </div>
+  </div>
+  
+<!-- Модальное окно -->
+<div id="modal_form_action" class="modal_form_action">
+  <div class="modal-content-form-action">
+    <h2>Заполните форму</h2>
+    <form id="priceFormAction">
+      <label for="name">ФИО:</label>
+      <input type="text" id="name" name="name" required placeholder="Введите ваше ФИО">
+
+      <label for="phone">Номер телефона:</label>
+      <input type="tel" id="phoneAction" name="phone" required placeholder="Введите ваш номер">
+
+      <button type="submit" class="submit-btn-form-Action">Отправить</button>
+      <button class="close-modal-btn-form-Action" aria-label="Закрыть">&times;</button>
+    </form>
+  </div>
+</div>
+<main>
+  <div class="reasons">
+    <div class="reasons_wrapper_title">
+      <h2>Бульдозер ZTM AST RSD16 – Надежность и </h2>
+      <h2>мощь для любых задач!</h2>
+    </div>
+    
+    <div class="reasons_box"></div>
+
+    <div class="reasons_wrapper_text">
+      <p><span class="highlight">Бульдозер ZTM AST RSD16 –</span> это проверенное временем решение для самых сложных условий. Сочетая в себе мощность, маневренность и долговечность, он станет вашим незаменимым помощником на строительных, дорожных и промышленных объектах.</p>
+    </div>
+  </div>
+  
+  <div class="five_resons">
+    <div class="five_resons_wrapper">
+      <h2>Еще пять причин выбрать ZTM AST RSD16:</h2>
+    </div>
+    
+    <div class="cart_wrapper_five">
+
+      <div class="leveling_cart">
+
+        <div class="cart">
+          <div class="rectangle"></div> 
+          <div class="number_cart">
+            <h1>1</h1> <!-- цифра -->
+          </div>
+          <div class="content">
+            <h3>Высокая производительность:</h3>
+            <p>Оснащен дизельным двигателем Weichai WD10 с мощностью 178 л.с., обеспечивающим стабильную работу в любых условиях.</p>
+          </div>
+        </div>
+        
+
+        <div class="cart">
+          <div class="rectangle"></div> 
+          <div class="number_cart">
+            <h1>2</h1>
+          </div>
+          <div class="content">
+            <h3>Устойчивый <br>и прочный</h3>
+            <p>Ходовая часть от Komatsu и самосмазывающиеся катки гарантируют долгий срок службы и надежность на сложных грунтах.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="leveling_cart cart-leveling">
+
+        <div class="cart">
+          <div class="rectangle"></div> 
+          <div class="number_cart">
+            <h1>3</h1>
+          </div>
+          <div class="content">
+            <h3>Удобный в управлении:</h3>
+            <p>Гидромеханическая трансмиссия обеспечивает плавное управление, а эргономичное рабочее место оператора повышает комфорт и снижает усталость.</p>
+          </div>
+        </div>
+  
+        <div class="cart">
+          <div class="rectangle"></div> 
+          <div class="number_cart">
+            <h1>4</h1>
+          </div>
+          <div class="content">
+            <h3>Разнообразие конфигураций:</h3>
+            <p>Возможность установки различного оборудования: рыхлителей, болотного отвала, угольного отвала, лесной защиты, что делает технику универсальной.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="five_resons_cart_five">
+    <div class="conteiner_five_resons_cart">
+
+    <div class="content_five_resons_cart_five">
+      <h3>Лизинг на выгодных условиях</h3>
+      <p>И 20% скидка на навесное <br> оборудование на первый заказ.</p>
+    </div>
+
+    <div class="form_sale">
+      <div class="number_five">
+        <h1>5</h1>
+      </div>
+        <button id="openModalFive" class="btnFive">Получить скидку</button>
+      </div>
+    </div>
+
+  </div>
+  <div id="modal_form_discount" class="modal_form_discount">
+    <div class="modal-content-form-discount">
+      <h2>Заполните форму</h2>
+      <form id="discountForm">
+        <label for="nameDiscount">ФИО:</label>
+        <input type="text" id="nameDiscount" name="name" required placeholder="Введите ваше ФИО">
+  
+        <label for="phoneDiscount">Номер телефона:</label>
+        <input type="tel" id="phoneDiscount" name="phone" required placeholder="Введите ваш номер">
+  
+        <button type="submit" class="submit-btn-form-discount">Отправить</button>
+        <button class="close-modal-btn-form-discount" aria-label="Закрыть">&times;</button>
+      </form>
+    </div>
+  </div>
+  
+  
+
+</main>
+
+  <script src="script.js"></script>
+</body>
+</html>

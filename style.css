@@ -1,0 +1,1250 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+    background-image: url('img/Rectangle\ 4.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+
+.header {
+  position: relative;
+  z-index: 8; 
+  padding: 10px 0;
+  background: linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.81) 100%);
+
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 115px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; 
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 30px; 
+}
+
+.nav {
+  display: flex;
+  gap: 30px; 
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.38px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.contact {
+  margin-left: auto; /* Отодвинуть блок с контактом максимально вправо */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Отступы между иконкой и текстом */
+}
+
+.contact img {
+  height: 20px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: black;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.38px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu {
+  display: none; /* По умолчанию скрыто */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.burger {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+
+.dropdown-menu {
+  display: none; /* Скрыть меню по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(251, 194, 16, 0.95);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu.active {
+  display: flex; /* Показать меню, когда оно активно */
+}
+
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/*-----------------------------------------------------------------------------*/
+
+
+.banner {
+  position: relative;
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: flex-start; /* Изменено: теперь все элементы прижаты к левому краю */
+  gap: 10px;
+}
+
+.overlay-left {
+  position: absolute;
+  right: 0; /* Прижимаем к правому краю */
+  top: -20%;
+  width: 52.7%;
+  height: 120%; /* Увеличение высоты */
+  z-index: 2; /* Над Rectangle 4.png, но под хедером */
+}
+
+
+
+.overlay-top {
+  position: absolute;
+  z-index: 3; 
+  left: 51%; 
+  bottom: -50px; 
+  transform: translateX(-50%); 
+  top: 16%;
+  max-height: 120%; 
+  width: 75%; 
+}
+
+
+.banner_title {
+  position: relative; 
+  margin-left: 150px;
+  margin-top: 40px;
+
+}
+
+.banner_title_text{
+  font-family: Montserrat;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: var(--DisplayLargeLineHeight);
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  
+}
+
+
+
+.title_banner_title{
+font-size: 30px;
+margin: 0;
+line-height: var(--DisplayLargeLineHeight);
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.call_to_action {
+  background:linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.8) 100%);
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 50px 0;
+  position: relative;
+}
+
+.call_to_action_wrapper {
+  max-width: 1440px;
+  margin: 0 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.call_to_action_title h1 {
+  font-family: Montserrat;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: var(--DisplayLargeLineHeight);
+  text-align: left;
+}
+
+.call_to_action_title p {
+  font-family: Montserrat;
+  font-size: 60px;
+  font-weight: 300;
+  margin: 0;
+  line-height: var(--DisplayLargeLineHeight);
+  text-align: left;
+}
+
+.form_action {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_action p {
+  width: 392px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center; /* Центрируем текст внутри */
+  margin: 5px 0; /* Уменьшаем отступы между абзацами */
+  line-height: 24px; /* Высота строки для читаемости */
+}
+
+.form_action button {
+  background: #048ABF;
+  z-index: 4;
+  color: #FFFFFF;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 63px;
+  width: 347px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px; /* Небольшой отступ под кнопкой */
+}
+
+
+
+/* Модальное окно - скрыто по умолчанию */
+.modal_form_action {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Увеличенный z-index */
+}
+
+
+/* Активное модальное окно */
+.modal_form_action.active {
+  display: flex; /* Появляется при добавлении класса active */
+}
+
+.modal-content-form-action {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.close-modal-btn-form-Action {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////*/
+
+.reasons {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reasons_wrapper_title {
+  margin-top: 100px;
+}
+
+.reasons_wrapper_title h2 {
+  font-family: Montserrat;
+  margin: 0;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: var(--DisplayLargeLineHeight);
+}
+
+.reasons_wrapper_text {
+  position: relative; /* Для нормального позиционирования текста */
+  z-index: 1; /* Текст выше прямоугольника */
+  margin: 0;
+  margin-top: 75px;
+  text-align: left;
+}
+
+.reasons_box {
+  background-color: white;
+  box-shadow: 6px 6px 4px 0px #F2870540;
+  width: calc(90% + 13%); /* Ширина больше текста на 10% */
+  height: calc(40% + 3%); /* Высота больше содержимого на 3% */
+  border-radius: 20px;
+  position: absolute; 
+  top: 270px; /* Положение над текстом */
+  left: -3%; /* Сдвиг влево на 7% */
+  z-index: 0; /* Под текстом */
+}
+
+
+
+.highlight {
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 410;
+  line-height: var(--DisplayLargeLineHeight);
+}
+
+.reasons_wrapper_text p {
+  font-family: Montserrat;
+  font-size: 25px;
+  font-weight: 250;
+  margin: 0;
+  margin-top: 25px;
+  align-self: center;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.five_resons {
+  max-width: 1440px;
+  margin: 0 150px;
+  margin-top: 90px;
+}
+
+.five_resons_wrapper h2 {
+  font-family: Montserrat, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-underline-position: from-font;
+  margin-bottom: 40px;
+}
+
+.cart_wrapper_five {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.leveling_cart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Для позиционирования цифры поверх прямоугольника */
+  width: 414px;
+}
+
+.rectangle {
+  background-color: #f3b85c; 
+  width: 100%; 
+  height: 128px; 
+  position: absolute; /* Чтобы растянуть по ширине родителя */
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.number_cart {
+  font-family: Noto Sans;
+  font-size: 140px;
+  font-weight: 900;
+  line-height: 1;
+  position: relative; /* Для наложения поверх .rectangle */
+  z-index: 2;
+  margin-left: 255px; 
+  margin-top: -215px;/* Небольшой отступ для видимости прямоугольника */
+}
+
+.content {
+  flex: 1;
+  position: relative; /* Чтобы текст не перекрывался цифрами */
+  z-index: 3;
+  margin-top: -310px; /* Отодвигаем текст вниз, чтобы был под цифрой и прямоугольником */
+}
+
+h3 {
+font-family: Montserrat;
+font-size: 35px;
+font-weight: 900;
+line-height: 51px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+.cart-leveling{
+  margin-top: 90px;
+
+}
+
+
+
+.five_resons_cart_five{
+  background:linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.8) 100%);
+  background-size: cover;
+  background-blend-mode: overlay;
+  height: 262px;
+  margin-top: 90px;
+  overflow: visible
+}
+
+
+
+.conteiner_five_resons_cart{
+  max-width: 1440px;
+  margin: 0 150px;
+  display: flex;
+  justify-content: space-between;
+}
+.content_five_resons_cart_five{
+  margin-top: 70px;
+
+}
+
+.content_five_resons_cart_five h3 {
+font-family: Montserrat;
+font-size: 32px;
+font-weight: 800;
+line-height: 40px;
+margin: 0;
+
+}
+.content_five_resons_cart_five p {
+  position: absolute;
+  font-size: 31px;
+  font-weight: 300;
+  margin: 0;
+}
+.form_sale {
+  width: 590px;
+  display: flex;
+  flex-direction: column; /* Элементы идут друг за другом (вертикально) */
+  align-items: flex-end;
+}
+
+
+.number_five h1 {
+  font-family: Noto Sans;
+  font-size: 250px;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  margin-top: -102px; /* Поднимаем над родительским блоком */
+ 
+  text-align: end;
+}
+
+.btnFive {
+  display: block; /* Задаем блочный элемент для полной ширины в родителе */
+  background: #048ABF;
+  color: #FFFFFF;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 900;
+  width: 347px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal_form_discount {
+  display: none; /* Скрываем модальное окно по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal_form_discount.active {
+  display: flex; /* Показываем модальное окно, когда оно активно */
+}
+
+.modal-content-form-discount {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close-modal-btn-form-discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* Адаптивность ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 15px;
+    gap: 15px;
+  }
+
+  .nav {
+    gap: 30px;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .call_to_action_wrapper {
+    margin: 0 50px;
+  }
+
+  .call_to_action_title h1,
+  .call_to_action_title p {
+    font-size: 40px;
+  }
+
+  .form_action button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #048ABF;
+    z-index: 4;
+    color: #FFFFFF;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 900;
+    width: 347px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .form_action p {
+    font-size: 16px;
+  }
+
+  .banner {
+    height: 600px;
+    background-size: cover;
+  }
+
+  .banner_title {
+    margin-left: 100px;
+    margin-top: 30px;
+  }
+
+  .banner_title_text {
+    font-size: 60px;
+  }
+
+  .title_banner_title {
+    font-size: 25px;
+  }
+
+  .overlay-left {
+    width: 50%;
+    height: 110%;
+    top: -15%;
+  }
+
+  .overlay-top {
+    width: 70%;
+    top: 20%;
+  }
+}
+@media (max-width: 1065px) {
+  .container {
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav a {
+    font-size: 18px;
+  }
+  .logo img {
+    height: 42px;
+  }
+
+  .call_to_action_wrapper {
+    margin: 0 35px;
+  }
+
+  .banner_title {
+    margin-left: 60px;
+  }
+
+  .banner_title_text {
+    font-size: 53px;
+  }
+
+  .title_banner_title {
+    font-size: 21px;
+  }
+
+  .overlay-left {
+    width: 47%;
+    top: -11%;
+  }
+
+  .overlay-top {
+    width: 64%;
+    top: 24%;
+  }
+}
+
+@media (max-width: 1097px) {
+  .container {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .nav {
+    gap: 25px;
+  }
+
+  .logo img {
+    height: 44px;
+  }
+
+  .call_to_action_wrapper {
+    margin: 0 45px;
+  }
+
+  .banner_title {
+    margin-left: 80px;
+  }
+
+  .banner_title_text {
+    font-size: 58px;
+  }
+
+  .title_banner_title {
+    font-size: 23px;
+  }
+
+  .overlay-left {
+    width: 48%;
+    top: -13%;
+  }
+
+  .overlay-top {
+    width: 68%;
+    top: 22%;
+  }
+}
+
+@media (max-width: 1044px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .logo img {
+    height: 43px;
+  }
+
+  .banner_title {
+    margin-left: 70px;
+  }
+
+  .banner_title_text {
+    font-size: 55px;
+  }
+
+  .title_banner_title {
+    font-size: 22px;
+  }
+
+  .call_to_action_wrapper {
+    margin: 0 40px;
+  }
+
+  .overlay-left {
+    width: 46%;
+    top: -12%;
+  }
+
+  .overlay-top {
+    width: 66%;
+    top: 23%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .banner {
+    height: 500px;
+    padding: 0 20px;
+  }
+
+  .banner_title {
+    margin-left: 50px;
+  }
+
+  .banner_title_text {
+    font-size: 50px;
+  }
+
+  .title_banner_title {
+    font-size: 20px;
+  }
+
+  .overlay-left {
+    width: 45%;
+    top: -10%;
+  }
+
+  .overlay-top {
+    width: 65%;
+    top: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    display: none;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .call_to_action_wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+  }
+
+  .call_to_action_title {
+    text-align: center;
+  }
+
+  .call_to_action_title h1 {
+    font-size: 32px;
+    margin-left: 20px;
+  }
+
+  .call_to_action_title p {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .form_action button {
+    width: 100%;
+  }
+
+  .form_action p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .banner {
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .banner_title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .banner_title_text {
+    font-size: 36px;
+  }
+
+  .title_banner_title {
+    font-size: 18px;
+  }
+
+  .overlay-left {
+    display: none;
+  }
+
+  .overlay-top {
+    width: 90%;
+    top: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .call_to_action {
+    padding: 30px 0;
+  }
+
+  .call_to_action_title h1 {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+
+  .call_to_action_title p {
+    font-size: 18px;
+  }
+
+  .form_action button {
+    width: 100%;
+    height: 50px;
+  }
+
+  .modal-content-form-action {
+    padding: 10px;
+  }
+
+  .banner {
+    height: 300px;
+  }
+
+  .banner_title_text {
+    font-size: 28px;
+  }
+
+  .title_banner_title {
+    font-size: 16px;
+  }
+
+  .overlay-top {
+    width: 100%;
+    top: 5%;
+  }
+}
+
+
+
+@media (max-width: 1248px) {
+  .reasons_box {
+    background-color: white;
+    box-shadow: 6px 6px 4px 0px #F2870540;
+    width: calc(90% + 15%); /* Ширина больше текста на 10% */
+    height: calc(40% + 8%); /* Высота больше содержимого на 3% */
+    border-radius: 20px;
+    position: absolute; 
+    top: 299px; /* Положение над текстом */
+    left: -3%; /* Сдвиг влево на 7% */
+    z-index: 0; /* Под текстом */
+  }
+}
+
+
+
+
+@media (max-width: 990px) {
+  .reasons_box {
+    background-color: white;
+    box-shadow: 6px 6px 4px 0px #F2870540;
+    width: calc(90% + 13%); /* Ширина больше текста на 10% */
+    height: calc(40% + 8%); /* Высота больше содержимого на 3% */
+    border-radius: 20px;
+    position: absolute; 
+    top: 299px; /* Положение над текстом */
+    z-index: 0; /* Под текстом */
+  }
+  .reasons_wrapper_text p {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 634px) {
+  .reasons_wrapper_text  {
+    margin: 0;
+    margin-top: 30px;
+  }
+  .highlight{
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 344px) {
+  .reasons_wrapper_text  {
+    margin: 0;
+    margin-top: 30px;
+  }
+  .highlight{
+    font-size: 16px;
+  }
+  .reasons_box {
+    background-color: white;
+    box-shadow: 6px 6px 4px 0px #F2870540;
+    width: calc(90% + 13%); /* Ширина больше текста на 10% */
+    height: calc(40% + 16%); /* Высота больше содержимого на 3% */
+    border-radius: 20px;
+    position: absolute; 
+    top: 299px; /* Положение над текстом */
+    z-index: 0; /* Под текстом */
+  }
+
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .reasons {
+    margin: 0 50px;
+  }
+
+  .reasons_wrapper_title h2 {
+    font-size: 35px;
+  }
+
+  .reasons_wrapper_text p {
+    font-size: 20px;
+  }
+  
+}
+
+@media (max-width: 1024px) {
+  .reasons {
+    margin: 0 20px;
+  }
+
+  .reasons_wrapper_title h2 {
+    font-size: 32px;
+  }
+
+  .reasons_wrapper_text p {
+    font-size: 20px;
+  }
+
+  .reasons_box {
+    top: 220px;
+    left: -2%;
+  }
+}
+
+@media (max-width: 768px) {
+  .reasons_wrapper_title h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .reasons_wrapper_text p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .reasons_box {
+    top: 200px;
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .reasons_wrapper_title h2 {
+    font-size: 24px;
+  }
+
+  .reasons_wrapper_text p {
+    font-size: 16px;
+  }
+
+  .reasons_box {
+    top: 180px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Адаптивный стиль для five_resons */
+
+@media (max-width: 1200px) {
+  .five_resons {
+    margin: 0 50px;
+  }
+
+  .five_resons_wrapper h2 {
+    font-size: 35px;
+  }
+
+  .cart_wrapper_five {
+    flex-direction: column;
+  }
+
+  .cart {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .number_cart h1 {
+    font-size: 120px;
+    margin-left: 200px;
+    margin-top: -180px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .five_resons {
+    margin: 0 20px;
+  }
+
+  .five_resons_wrapper h2 {
+    font-size: 30px;
+  }
+
+  .cart_wrapper_five {
+    flex-direction: column;
+  }
+
+  .cart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .number_cart h1 {
+    font-size: 100px;
+    margin-left: 150px;
+    margin-top: -150px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .five_resons_cart_five {
+    height: auto;
+    padding: 20px;
+  }
+
+  .conteiner_five_resons_cart {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .number_five h1 {
+    font-size: 180px;
+    margin-top: -80px;
+  }
+
+  .btnFive {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .five_resons_wrapper h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .cart {
+    width: 100%;
+  }
+
+  .number_cart h1 {
+    font-size: 80px;
+    margin-left: 100px;
+    margin-top: -100px;
+  }
+
+  h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .conteiner_five_resons_cart {
+    padding: 0;
+    text-align: center;
+  }
+
+  .btnFive {
+    width: 100%;
+  }
+
+  .number_five h1 {
+    font-size: 150px;
+    margin-top: -60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart {
+    width: 100%;
+  }
+
+  .number_cart h1 {
+    font-size: 60px;
+    margin-left: 50px;
+    margin-top: -70px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .conteiner_five_resons_cart {
+    gap: 10px;
+  }
+
+  .number_five h1 {
+    font-size: 100px;
+    margin-top: -40px;
+  }
+
+  .btnFive {
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1248px) {
+  .reasons {
+    margin-bottom: 550px; /* Увеличиваем отступ снизу, чтобы блоки не накладывались */
+  }
+
+  .reasons_box {
+    top: 240px; /* Корректируем позицию reasons_box */
+  }
+
+  .five_resons {
+    margin-top: 140px; /* Увеличиваем отступ сверху для five_resons */
+  }
+ 
+}
