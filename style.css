@@ -2,12 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat";
-  background-image: url('img/Rectangle 4.png');
-  background-size: cover; /* или contain, если нужно */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; /* Зафиксировать фон (опционально) */
-  min-height: 100vh; /* Минимальная высота */
 }
 
 .container {
@@ -35,7 +29,8 @@ body {
 }
 
 .green-line {
-  background-color: green; /* Зеленый фон */
+  background: linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.81) 100%);
+
   height: 95px; /* Высота зеленой линии */
   display: flex;
   align-items: center;
@@ -124,8 +119,8 @@ margin-right: 25px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw; /* 100% ширины окна */
+  height: 50vh; /* 100% высоты окна */
   background-color: rgba(251, 194, 16, 0.95);
   flex-direction: column;
   align-items: center;
@@ -148,15 +143,32 @@ margin-right: 25px;
   font-size: 24px;
 }
 
-.close-btn {
+.close-menu-btn {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: none;
+  background: rgba(251, 194, 16, 0.95);
   border: none;
   font-size: 24px;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ee0909;
+  font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
 /*-----------------------------------------------------------------------------*/
 .wraperVrap {
   display: grid;
@@ -218,7 +230,7 @@ line-height: 1;
 /* Общий сброс стилей */
 
 .green-background {
-  background-color: green; /* Зеленый фон */
+  background: linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.8) 100%);
   height: 274px; /* Высота фона */
   width: 100%; /* Фон на весь экран */
   display: flex;
@@ -282,6 +294,7 @@ color:  #000000;
   font-weight: 900;
   line-height: 64px;
   text-align: center;
+  cursor: pointer;
 
 }
 
@@ -367,7 +380,7 @@ line-height: 1.9;
   max-width: 1064px;
   height: 194px;
   grid-column: 1 / 13; /* Занимает все 12 полос */
-  background-color: #ff0000;
+  background-color: #FFFFFF;
   padding: 16px;
   border-radius: 4px;
   margin-top: 9px;
@@ -435,6 +448,7 @@ box-shadow: 6px 6px 4px 0px #F2870540;
   font-size: 36px;
   font-weight: 900;
   line-height: 51px;
+  z-index: 2;
 }
 
 .text p{
@@ -442,7 +456,7 @@ box-shadow: 6px 6px 4px 0px #F2870540;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 400;
-
+  z-index: 2;
 
 } 
 
@@ -487,7 +501,7 @@ box-shadow: 6px 6px 4px 0px #F2870540;
 .num {
   min-height: 100px;
   width: auto;
-  background-color: aqua;
+  background-color: #F2C166;
   position: relative; /* Устанавливает контекст для абсолютного позиционирования */
   overflow: visible;
   margin-bottom: 30px; /* Базовый отступ между .num и следующим элементом */
@@ -508,6 +522,7 @@ box-shadow: 6px 6px 4px 0px #F2870540;
   position: absolute; /* Позволяет точно позиционировать элемент */
   right: 10px; /* Отступ от правого края */
   bottom: -40px; /* Смещение вниз */
+  z-index: 1;
 }
 
 
@@ -523,13 +538,14 @@ box-shadow: 6px 6px 4px 0px #F2870540;
   margin-top: 40px;
   height: 60px;
   text-align: center;
+  cursor: pointer;
 }
 
 
 
 
 .greenFive{
-  background-color: green; /* Зеленый фон */
+  background: linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.8) 100%);
   height: 262px; /* Высота фона */
   width: 100%; /* Фон на весь экран */
   display: flex;
@@ -575,31 +591,6 @@ line-height: 40px;
 
 
 
-
-
-/* Адаптация для планшетов */
-@media (max-width: 768px) {
-  .point {
-    grid-column: span 12; /* На планшетах элементы занимают всю ширину */
-  }
-
-  .point:nth-child(2n) {
-      grid-column: span 12;
-    }
-
-  .num {
-    display: flex; /* Flexbox для центрирования */
-    align-items: center; /* Центрируем по вертикали */
-    justify-content: center; /* Центрируем по горизонтали */
-    min-height: 100px;
-  }
-
-  .num p {
-    font-size: 100px;
-    position: static; /* Сбрасываем абсолютное позиционирование */
-    text-align: center; /* Центрируем текст */
-  }
-}
 
 
 
@@ -843,6 +834,10 @@ line-height: 40px;
   margin-bottom: 20px;
 }
 
+.slider-secondary .slider-item.active-thumbnail {
+  border: 2px solid #048abf;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
 
 @media (max-width: 900px) {
@@ -926,8 +921,502 @@ line-height: 40px;
 
 
 .card2 {
-  margin-top: 50px;
+  margin-top: 70px;
 }
+
+
+
+
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  width: 530px; /* Соответствует ширине основного изображения */
+  position: relative;
+}
+
+.slider-button {
+  background-color: #048abf;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.slider-button:focus {
+  outline: none;
+}
+
+.slider-button:hover {
+  background-color: #036b9e;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .slider-controls {
+    width: 100%; /* Делает контейнер кнопок по ширине слайдера */
+    justify-content: space-between; /* Равномерно размещает кнопки */
+    margin: 10px 0;
+  }
+
+  .slider-button {
+    width: 35px; /* Уменьшенные размеры кнопок для мобильных */
+    height: 35px;
+    font-size: 20px; /* Соответственно размер текста внутри */
+  }
+}
+
+@media (max-width: 700px) {
+  .slider-controls {
+    width: 100%; /* Слайдер занимает всю ширину */
+    justify-content: space-between; /* Централизовано */
+    position: relative; /* Остаётся внутри блока */
+  }
+
+  .slider-button {
+    width: 30px; /* Ещё меньше для узких экранов */
+    height: 30px;
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************************************************/
+.doublebenefit {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 равных колонок */
+  gap: 20px; /* Отступ между колонками и строками */
+  width: 100%;
+  max-width: 1140px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding: 20px; /* Внутренние отступы для эстетики */
+  padding-left: 55px;
+  margin-top: 30px;
+}
+
+.benefitText {
+  display: contents; /* Убираем контейнер для независимого управления его дочерними элементами */
+}
+
+.benefitText h1 {
+  grid-column: 1 / 6; /* Заголовок занимает с 1 по 5 линию */
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.benefitText p {
+  grid-column: 1 / 11; /* Текст занимает с 1 по 11 линию */
+  grid-row: 2; /* Располагается под заголовком */
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 47px;
+}
+
+/**************************************************************************************************/
+.packageConteiner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 равных колонок */
+  gap: 20px; /* Расстояние между колонками и строками */
+  width: 100%;
+  max-width: 1140px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding: 20px; /* Внутренние отступы для эстетики */
+  padding-left: 100px;
+  margin-top: 20px;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  flex-direction: column; /* Элементы сверху вниз */
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.packageConteiner button {
+  width: 326px;
+  height: 213px;
+  border-color:#D9D9D9 ;
+  background: #D9D9D9;
+  border-radius: 20px;
+  opacity: 0.5; 
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #848383;
+}
+
+.packageConteiner p {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  padding-top: 45px;
+
+}
+
+.button-1 {
+  grid-column: 1 / 4;
+}
+
+.button-2 {
+  grid-column: 5 / 8;
+}
+
+.button-3 {
+  grid-column: 9 / 12;
+}
+
+.button-4 {
+  grid-column: 3 / 6;
+  margin-top: 90px;
+}
+
+.button-5 {
+  grid-column: 7 / 10;
+  margin-top: 90px;
+}
+
+
+/***********************************************************************/
+
+.bacgroundSection {
+  background: linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.8) 100%);
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionMore{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 равных колонок */
+  gap: 20px; /* Расстояние между колонками и строками */
+  width: 100%;
+  max-width: 1140px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding-left: 55px;
+  margin-top: 30px;
+}
+
+
+
+
+.more1{
+  grid-column: 1 / 6; /* С 1 по 5 грид-столбцы */
+}
+.more1 p {
+  margin-top: 40px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 31px;
+}
+
+.more2 {
+  grid-column: 8 / 13;
+}
+
+.more2 p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 23px;
+  padding-bottom: 15px;
+}
+
+
+
+
+.buttonMore {
+  grid-column: 8 / 11; /* С 8 по 10 грид-столбцы */
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.buttonMore button {
+  width: 347px;
+  height: 60px;
+  border-radius: 10px ;
+  border: none;
+  background-color: #048ABF;
+  color:  #FFFFFF;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 64px;
+  text-align: center;
+  cursor: pointer;
+}
+.buttonMore button:hover{
+  background-color: #858585;
+}
+
+
+/************************************************************************************************************************************/
+
+.retrofitting {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 равных столбцов */
+  gap: 20px; /* Расстояние между колонками и строками */
+  width: 100%;
+  max-width: 1140px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding-left: 55px;
+  margin-top: 30px;
+}
+
+.first {
+  grid-column: 1 / 4; 
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 300;
+
+
+}
+
+.second {
+  grid-column: 1 / 12; 
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+
+
+}
+
+.third {
+  grid-column: 1 / 12; 
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 39px;
+
+}
+
+
+/* Адаптация для планшетов */
+@media (max-width: 768px) {
+  .retrofitting {
+    grid-template-columns: 1fr; /* Одна колонка */
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .first, .second, .third {
+    grid-column: 1 / -1; /* Элементы занимают всю ширину */
+  }
+
+  .first {
+    font-size: 24px; /* Уменьшение размера шрифта */
+  }
+
+  .second {
+    font-size: 36px;
+  }
+
+  .third {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 480px) {
+  .retrofitting {
+    grid-template-columns: 1fr; /* Одна колонка */
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .first {
+    font-size: 20px;
+  }
+
+  .second {
+    font-size: 28px;
+  }
+
+  .third {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.extra {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 равных столбцов */
+  gap: 20px; /* Расстояние между колонками и строками */
+  width: 100%;
+  max-width: 1140px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding-left: 55px;
+  margin-top: 65px;
+}
+
+.extraCard {
+  grid-column: span 4; /* Карточка занимает 4 колонки */
+  max-width: 331px;
+  background: #ffffff;
+  border:none;
+  border-radius: 20px;
+  background: #F2C166;
+  padding: 16px;
+  text-align: center; /* Центрируем текст */
+  display: flex;
+  flex-direction: column; /* Располагаем элементы друг под другом */
+  text-align: left; /* Выравниваем текст по левому краю */
+}
+
+.extraCard h2 {
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 39px;
+  margin-bottom: 8px; /* Отступ снизу */
+  color:  #F2F2F2;
+}
+
+.extraCard img {
+  width: 100%; /* Растягиваем картинку по ширине карточки */
+  height: auto; /* Сохраняем пропорции */
+  margin-bottom: 8px; /* Отступ снизу */
+  border-radius: 4px;
+  margin-top: 40px;
+}
+
+.extraCard p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 25px;
+  
+}
+
+/************************************************************************************************************************************/
+
+/* Стили для попапа */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0; /* Скрыт по умолчанию */
+  pointer-events: none; /* Отключены клики по скрытому попапу */
+  transition: opacity 0.3s ease;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.popup.show {
+  opacity: 1; /* Показываем попап */
+  pointer-events: auto; /* Разрешаем клики */
+}
+
+.hidden {
+  display: none;
+}
+
+/************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -950,6 +1439,224 @@ line-height: 40px;
 
 
 /* Адаптивность ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .extra {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 16px; /* Уменьшаем расстояние между карточками */
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .extraCard {
+    grid-column: span 12; /* Карточка занимает всю ширину */
+    max-width: 100%; /* Убираем фиксированную ширину */
+    padding: 12px;
+  }
+
+  .extraCard h2 {
+    font-size: 28px; /* Уменьшаем размер заголовка */
+    line-height: 32px;
+  }
+
+  .extraCard img {
+    width: 100%; /* Картинка остается на всю ширину карточки */
+    max-height: 200px; /* Максимальная высота для предотвращения больших изображений */
+    object-fit: contain; /* Сохраняем пропорции изображения, подгоняя его в контейнер */
+    margin-top: 20px; /* Сокращаем отступы сверху */
+    margin-bottom: 12px; /* Сокращаем отступы снизу */
+  }
+
+  .extraCard p {
+    font-size: 16px; /* Уменьшаем размер текста */
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+   .extra {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 16px; /* Уменьшаем расстояние между карточками */
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .extraCard h2 {
+    font-size: 24px; /* Еще меньше для мобильных */
+    line-height: 28px;
+  }
+
+  .extraCard p {
+    font-size: 14px; /* Уменьшаем текст для мобильных */
+    line-height: 22px;
+  }
+
+  .extra {
+    gap: 12px; /* Еще меньше расстояние между карточками */
+  }
+
+  .extraCard {
+    padding: 10px; /* Уменьшаем внутренние отступы карточек */
+  }
+  .extraCard img {
+    width: 100%; /* Картинка остается на всю ширину карточки */
+    max-height: 200px; /* Максимальная высота для предотвращения больших изображений */
+    object-fit: contain; /* Сохраняем пропорции изображения, подгоняя его в контейнер */
+    margin-top: 20px; /* Сокращаем отступы сверху */
+    margin-bottom: 12px; /* Сокращаем отступы снизу */
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .bacgroundSection {
+    padding: 12px; /* Увеличиваем отступы */
+  }
+
+  .more1 p {
+    font-size: 20px; /* Уменьшаем шрифт */
+    line-height: 28px;
+  }
+
+  .more2 p {
+    font-size: 16px; /* Уменьшаем шрифт описания */
+    line-height: 22px;
+  }
+
+  .buttonMore button {
+    font-size: 16px; /* Уменьшаем размер текста кнопки */
+    height: 50px; /* Уменьшаем высоту кнопки */
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bacgroundSection {
+    height: auto; /* Автоматическая высота */
+    padding: 12px; /* Увеличиваем внутренние отступы */
+    display: flex;
+    flex-direction: column; /* Элементы располагаются в одну колонку */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    text-align: center; /* Центрируем текст */
+  }
+
+  .sectionMore {
+    width: 100%; /* На всю ширину */
+    display: flex;
+    flex-direction: column; /* Располагаем элементы вертикально */
+    align-items: center; /* Центрируем содержимое */
+    text-align: center; /* Текст по центру */
+    gap: 20px; /* Расстояние между элементами */
+    margin-top: 0; /* Убираем отступ сверху */
+    padding: 0;
+  }
+
+  .more1, .more2 {
+    width: 100%; /* На всю ширину */
+    text-align: center; /* Текст по центру */
+  }
+
+  .more1 p {
+    font-size: 18px; /* Уменьшаем размер текста */
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .more2 p {
+    padding: 0;
+    font-size: 14px; /* Уменьшаем размер текста */
+    
+  }
+
+  .buttonMore {
+    width: 100%; /* Контейнер кнопки на всю ширину */
+    display: flex;
+    justify-content: center; /* Центрируем кнопку */
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .buttonMore button {
+    width: 100%; /* Кнопка на всю ширину */
+    max-width: 300px; /* Максимальная ширина кнопки */
+    height: 50px; /* Уменьшаем высоту */
+    font-size: 16px; /* Уменьшаем размер шрифта */
+    line-height: 50px; /* Центрирование текста */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -985,10 +1692,6 @@ line-height: 40px;
     right: 5%;
   }
 }
-
-
-
-
 
 
 
@@ -1065,9 +1768,6 @@ line-height: 40px;
 
 
 
-
-
-
 /* Адаптив для планшетов (ширина от 768px до 1024px) */
 @media (max-width: 1024px) {
   .container {
@@ -1124,22 +1824,18 @@ line-height: 40px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Адаптив для планшетов и узких экранов */
 @media (max-width: 768px) {
+  .wrapper-best {
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    padding-left: 30px; /* Уменьшаем отступы */
+    gap: 15px; /* Уменьшаем расстояние между элементами */
+    margin: 0;
+    padding: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
   .greenFive {
     flex-direction: column; /* Перестраиваем блоки в колонку */
     height: auto; /* Автоматическая высота */
@@ -1177,9 +1873,280 @@ line-height: 40px;
   }
 
   .bth5 {
-    width: 300px; /* Кнопка на всю ширину */
+    width: 250px; /* Кнопка на всю ширину */
     height: 50px; /* Уменьшаем высоту */
     font-size: 12px; /* Уменьшаем шрифт */
+    display: flex;
+    justify-content: center;
     margin: 0;
   }
 }
+
+
+/* Адаптивность для мобильных устройств (ширина экрана до 768px) */
+@media (max-width: 768px) {
+  .wrapper-best {
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    padding-left: 30px; /* Уменьшаем отступы */
+    gap: 15px; /* Уменьшаем расстояние между элементами */
+    margin: 0;
+    padding: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+    .point {
+      grid-column: span 12; /* На планшетах элементы занимают всю ширину */
+    }
+  
+    .point:nth-child(2n) {
+        grid-column: span 12;
+      }
+  
+    .num {
+      display: flex; /* Flexbox для центрирования */
+      align-items: center; /* Центрируем по вертикали */
+      justify-content: center; /* Центрируем по горизонтали */
+      min-height: 100px;
+    }
+    .text h1 {
+      font-size: 20px;
+    }
+  
+  .titleFive {
+    padding: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+.point5{
+  padding: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 50px;
+}
+  .num p {
+    font-size: 80px; /* Уменьшаем размер текста */
+  }
+
+  .text h1 {
+    font-size: 24px; /* Уменьшаем размер заголовка */
+    line-height: 32px;
+  }
+
+  .text p {
+    font-size: 16px; /* Уменьшаем размер текста */
+    line-height: 24px;
+  }
+
+  .titleFive h1 {
+    font-size: 20px; /* Уменьшаем размер заголовка для секции */
+  }
+  .textFive h1{
+    font-size: 20px;
+  }
+  .textFive p{
+    font-size: 16px;
+  }
+  .textFive{
+    padding-bottom: 0;
+  }
+  .conteinerModela h1 {
+    margin: 0;
+    grid-column: 3 / span 5; 
+    font-size: 50px;
+  }
+  .conteinerModela{
+    padding: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Адаптивность для планшетов (ширина экрана от 769px до 1024px) */
+@media (max-width: 1024px) {
+  .wrapper-best {
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    padding-left: 30px; /* Уменьшаем отступы */
+    gap: 15px; /* Уменьшаем расстояние между элементами */
+    margin: 0;
+    padding: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .point {
+    max-width: 100%; /* Убираем фиксированную ширину */
+    margin-top: 40px; /* Уменьшаем отступ сверху */
+  }
+
+  .num p {
+    font-size: 120px; /* Уменьшаем размер текста */
+  }
+
+  .text h1 {
+    font-size: 30px; /* Уменьшаем размер заголовка */
+    line-height: 38px;
+  }
+  .text h1 {
+    font-size: 20px;
+  }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Адаптив для планшетов (ширина экрана до 768px) */
+@media (max-width: 768px) {
+  .doublebenefit {
+    grid-template-columns: 1fr; /* Одна колонка */
+    padding-left: 20px; /* Уменьшаем отступы */
+    gap: 15px;
+    padding: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .benefitText h1 {
+    font-size: 32px; /* Уменьшаем размер заголовка */
+  }
+
+  .benefitText p {
+    font-size: 24px; /* Уменьшаем размер текста */
+    line-height: 32px;
+  }
+
+  .packageConteiner {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 15px; /* Уменьшаем расстояние между элементами */
+    padding-left: 20px;
+  }
+
+  .button-container {
+    margin-top: 10px; /* Уменьшаем отступы */
+  }
+
+  .content button {
+    width: 240px; /* Уменьшаем ширину кнопки */
+    height: 160px; /* Уменьшаем высоту кнопки */
+  }
+
+  .packageConteiner p {
+    font-size: 18px; /* Уменьшаем размер текста */
+    line-height: 24px;
+    padding-top: 15px;
+  }
+
+  /* Выравнивание кнопок в одну колонку */
+  .button-1,
+  .button-2,
+  .button-3,
+  .button-4,
+  .button-5 {
+    grid-column: 1 / -1; /* Занимает всю ширину */
+    margin-top: 0; /* Сбрасываем отступы */
+  }
+}
+
+/* Адаптив для мобильных устройств (ширина экрана до 480px) */
+@media (max-width: 480px) {
+  .doublebenefit {
+    grid-template-columns: 1fr; /* Одна колонка */
+    padding-left: 10px; /* Ещё меньше отступов */
+    gap: 10px;
+    padding: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .benefitText h1 {
+    font-size: 20px; /* Ещё меньше заголовок */
+  }
+
+  .benefitText p {
+    font-size: 16px; /* Ещё меньше текст */
+    line-height: 1.2;
+  }
+
+  .packageConteiner {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 10px;
+    padding-left: 10px;
+  }
+
+  .content button {
+    width: 180px; /* Минимальная ширина кнопки */
+    height: 120px; /* Минимальная высота кнопки */
+  }
+
+  .packageConteiner p {
+    font-size: 14px; /* Минимальный размер текста */
+    line-height: 20px;
+    padding-top: 10px;
+  }
+
+  /* Выравнивание кнопок в одну колонку */
+  .button-1,
+  .button-2,
+  .button-3,
+  .button-4,
+  .button-5 {
+    grid-column: 1 / -1; /* Занимает всю ширину */
+    margin-top: 0; /* Сбрасываем отступы */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

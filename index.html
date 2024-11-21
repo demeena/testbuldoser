@@ -50,6 +50,7 @@
       </div>
   </header> 
 
+
   
   <div class="container">
     <div class="banner">
@@ -70,35 +71,15 @@
       <p>ДО 1 000 000 руб.</p>
     </div>
     <div class="block button-block">
-      <button id="openModal" class="btn">Получить лучшую цену</button>
+      <button id="openModal" class="popup-trigger btn">Получить лучшую цену</button>
       <p>Оставьте заявку и получите лучшее предложение всего за 15 минут</p>
     </div>
   </div>
 </div>
-  
-<!-- Модальное окно -->
-<div id="modal_form_action" class="modal_form_action">
-  <div class="modal-content-form-action">
-    <h2>Заполните форму</h2>
-    <form id="priceFormAction">
-      <label for="name">ФИО:</label>
-      <input type="text" id="name" name="name" required placeholder="Введите ваше ФИО">
-
-      <label for="phone">Номер телефона:</label>
-      <input type="tel" id="phoneAction" name="phone" required placeholder="Введите ваш номер">
-
-      <button type="submit" class="submit-btn-form-Action">Отправить</button>
-      <button class="close-modal-btn-form-Action" aria-label="Закрыть">&times;</button>
-    </form>
-  </div>
-</div>
 <main>
 
-
-
-
       <div class="container">
-          <h1 class="title">
+          <h1 id="about" class="title">
               Бульдозер ZTM AST RSD16 – Надежность и мощь для любых задач!
           </h1>
           <div class="description-box">
@@ -116,7 +97,7 @@
                 <div class="num-backround"><p>1</p></div>
             </div>
             <div class="text">
-                <h1>Высокая производтельность:</h1>
+                <h1>Высокая<br> производтельность:</h1>
                 <p>Оснащен дизельным двигателем <br> Weichai WD10 с мощностью 178 л.с., <br> обеспечивающим стабильную работу <br> в любых условиях.</p>
             </div>
         </div>
@@ -159,22 +140,33 @@
             <p>И 20% скидка на навесное<br> оборудование на первый заказ.</p>
         </div>
         <div class="formFive">
-          <button id="openModal" class="btn bth5">Получить скидку</button>
+          <button id="openModal" class="popup-trigger btn bth5">Получить скидку</button>
         </div>
     </div>
     </div>
 
-<div class="conteinerModela">
+<div   id="features" class="conteinerModela">
   <h1>МОДЕЛИ</h1>
 </div>
 <div class="card">
-  <div class="image-block">
+  <div class="image-block" data-id="1">
       <div class="head-text">
           <h3>Бульдозер</h3>
           <h1>ZTM AST RSD16</h1>
       </div>
-      <div class="slider"><img src="img/1.jpg" alt=""></div>
-      <div class="slider-secondary"><img src="img/1.jpg" alt="" class="slider-item"><img src="img/1.jpg" alt="" class="slider-item"><img src="img/1.jpg" alt="" class="slider-item"></div>
+      <div class="slider">
+        <img src="img/baza1.jpg" alt="" class="main-image">
+      </div>
+      <div class="slider-controls">
+        <button class="slider-button prev">&lt;</button>
+        <button class="slider-button next">&gt;</button>
+      </div>
+      <div class="slider-secondary">
+        <img src="img/baza1.jpg" alt="" class="slider-item">
+        <img src="img/baza2.jpg" alt="" class="slider-item">
+        <img src="img/baza3.jpg" alt="" class="slider-item">
+        <img src="img/baza4.jpg" alt="" class="slider-item">
+      </div>
   </div>
   <div class="table-block">
   <div class="warranity"><p>Гарантия <span>12 месяцев или 2000 м/ч.</span></p></div>
@@ -219,7 +211,7 @@
   <div class="price-block">
       <p class="old-price">СТАРАЯ ЦЕНА: 13 300 000 </p>
       <new class="price">Новая цена: 12 300 000</new>
-      <button class="zakaz">Заказать</button>
+      <button class="popup-trigger zakaz">Заказать</button>
   </div>
 
 </div>
@@ -229,25 +221,38 @@
 
 
 
-<div class="card card2">
-  <div class="image-block">
+
+<div class="card card2" data-id="2">
+  <div class="image-block" data-id="1">
       <div class="head-text">
           <h3>Бульдозер</h3>
-          <h1>ZTM AST RSD16</h1>
+          <h1>ZTM AST RSD16L</h1>
       </div>
-      <div class="slider"><img src="img/1.jpg" alt=""></div>
-      <div class="slider-secondary"><img src="img/1.jpg" alt="" class="slider-item"><img src="img/1.jpg" alt="" class="slider-item"><img src="img/1.jpg" alt="" class="slider-item"></div>
+      <div class="slider">
+        <img src="img/bolot1.jpg" alt="" class="main-image">
+      </div>
+      <div class="slider-controls">
+        <button class="slider-button prev">&lt;</button>
+        <button class="slider-button next">&gt;</button>
+      </div>
+      <div class="slider-secondary">
+        <img src="img/bolot1.jpg" alt="" class="slider-item">
+        <img src="img/bolot2.jpg" alt="" class="slider-item">
+        <img src="img/bolot3.jpg" alt="" class="slider-item">
+        <img src="img/bolot4.jpg" alt="" class="slider-item">
+      </div>
+      
   </div>
   <div class="table-block">
   <div class="warranity"><p>Гарантия <span>12 месяцев или 2000 м/ч.</span></p></div>
       <table class="table">
           <tr>
               <td>Размеры (ДхШхВ) с рыхлителем</td>
-              <td>6050 x 3388 x 3150 (мм)</td>
+              <td>6050 x 4190 x 3150 (мм)</td>
           </tr>
           <tr>
               <td>Эксплуатационная масса, кг (без рыхлителя)</td>
-              <td>18200 кг</td>
+              <td>19500 кг</td>
           </tr>
           <tr>
               <td>Модель ДВС</td>
@@ -259,7 +264,7 @@
           </tr>
           <tr>
               <td>Ширина башмака</td>
-              <td>510 мм</td>
+              <td>700,950, 1100 мм</td>
           </tr>
           <tr>
               <td>Поддерживающие катки</td>
@@ -267,11 +272,11 @@
           </tr>
           <tr>
               <td>Опорные катки</td>
-              <td>6</td>
+              <td>7</td>
           </tr>
           <tr>
               <td>Количество башмаков в гусенице</td>
-              <td>37</td>
+              <td>42</td>
           </tr>
           <tr>
               <td>Отвал (ШхВ)</td>
@@ -279,9 +284,9 @@
           </tr>
       </table>
   <div class="price-block">
-      <p class="old-price">СТАРАЯ ЦЕНА: 13 300 000 </p>
-      <new class="price">Новая цена: 12 300 000</new>
-      <button class="zakaz">Заказать</button>
+      <p class="old-price">СТАРАЯ ЦЕНА: ?? ??? ??? </p>
+      <new class="price">Новая цена: ?? ??? ???</new>
+      <button class="popup-trigger zakaz zakaz2">Заказать</button>
   </div>
 
 </div>
@@ -290,6 +295,105 @@
 
 
 
+  <div class="doublebenefit">
+    <div class="benefitText">
+      <h1>Двойная выгода</h1>
+      <p>Сделав заказа у нас вы получаете скидку <br> а так же расширенную комплектацию по цене базовой !</p>
+    </div>
+    </div>
+ 
+    <div class="packageConteiner">
+      <div class="button-container button-1">
+        <div class="content">
+          <button></button>
+          <p>Зимний<br> пакет</p>
+        </div>
+      </div>
+      <div class="button-container button-2">
+        <div class="content">
+          <button></button>
+          <p>Увеличенный <br> радиатор отопления</p>
+        </div>
+      </div>
+      <div class="button-container button-3">
+        <div class="content">
+          <button></button>
+          <p>Автономный <br> подогреватель</p>
+        </div>
+      </div>
+      <div class="button-container button-4">
+        <div class="content">
+          <button></button>
+          <p>Дополнительные <br> сопла обдува кабины и <br>  ног</p>
+        </div>
+      </div>
+      <div class="button-container button-5">
+        <div class="content">
+          <button></button>
+          <p>Топливная аппаратура <br>  под климатические<br>  условия России</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="bacgroundSection ">
+      <div class="sectionMore">
+        <div class="sectionMoreText more1">
+          <p>Хотите узнать больше <br> о понравившейся модели?</p>
+        </div>
+        <div class="sectionMoreText more2">
+          <p>
+            Оставьте заявку и мы проконсультируем вас,<br> а так же вышлем полные технические характеристики модели.
+          </p>
+          <div class="buttonMore">
+            <button class="popup-trigger">Узнать больше</button>
+          </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="retrofitting">
+            <p class="first">Дооснащение</p>
+            <p class="second">Широкий выбор дополнительного оборудования!</p>
+            <p class="third">Наша компания предлагает множество вариантов навесного оборудования для <br> бульдозеров, которое идеально подходит для любых задач. У нас вы найдете всё — от стандартных Отвалов до специализированных решений для разных видов<br>  работ. Благодаря большому ассортименту, вы сможете выбрать оборудование, которое полностью удовлетворит ваши потребности.</p>
+          </div>
+
+
+
+
+          <div class="extra">
+            <div class="extraCard">
+              <h2>Отвалы</h2>
+              <img src="img/otval.png" alt="Картинка 1">
+              <p>Прямой с гидроперекосом<br>
+                Прямой с гидроперекосом с увеличенной призмой волочения<br>
+                Полусферический отвал с гидроперекосом<br>
+                Полноповоротный отвал 3D (планировочный)<br>
+                Отвал для полигонов ТБО<br>
+                Отвал для угля и торфа<br>
+                Скальный отвал<br>
+                Отвал корчеватель<br>
+                </p>
+            </div>
+            <div class="extraCard">
+              <h2>Навесное</h2>
+              <img src="img/navesnoe.png" alt="Картинка 2">
+              <p>Лебедки гидравлические <br>
+                Кабелеукладчик КВГ<br>
+                Пропорщик под кабель ПВГ<br>
+                Рыхлитель гидравлический <br>
+                Лесная защита кабины и кузова<br>
+                Арктический пакет для работы до -50С.</p>
+            </div>
+            <div class="extraCard">
+              <h2>Гусеницы</h2>
+              <img src="img/gusen.png" alt="Картинка 3">
+              <p>Базовая: 510 мм<br>
+                Среедняя: 700 мм<br> 
+                Болотная: 950 мм<br>
+                Болотная: 1100 мм</p>
+            </div>
+          </div>
 
 
 
@@ -298,11 +402,24 @@
 
 
 
+          
 
-
-
+          
 
 </main>
+
+
+
+
+
+
+<!-- Пустая разметка попапа -->
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <p>Это  попап.для битрикс.</p>
+  </div>
+</div>
 
   <script src="script.js"></script>
 </body>
