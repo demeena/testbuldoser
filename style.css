@@ -69,6 +69,11 @@ body {
   color:#2C2C2C;
 }
 
+.nav a:hover {
+  font-size: 22px;
+  color:#1a1919;
+}
+
 .contact {
   grid-column: 9 / 13; /* Контакты с 10 по 12 линии */
   display: flex;
@@ -93,6 +98,10 @@ body {
 margin-right: 25px;
 }
 
+.contact a:hover{
+  font-size: 22px;
+  color:#1a1919;
+}
 
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -121,7 +130,7 @@ margin-right: 25px;
   left: 0;
   width: 100vw; /* 100% ширины окна */
   height: 50vh; /* 100% высоты окна */
-  background-color: rgba(251, 194, 16, 0.95);
+  background-color: #F2C166;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -144,10 +153,16 @@ margin-right: 25px;
 }
 
 .close-menu-btn {
+  display: flex;
+  justify-content: center; /* Центрирует элементы по горизонтали */
+  align-items: center; /* Центрирует элементы по вертикали */
+  text-align: center;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: rgba(251, 194, 16, 0.95);
+  width: 40px;
+  height: 40px;
+  top: 45px;
+  right: 40px;
+  background: #66A4F2;
   border: none;
   font-size: 24px;
   cursor: pointer;
@@ -155,7 +170,7 @@ margin-right: 25px;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #ee0909;
+  color: white;
   font-weight: bold;
 }
 
@@ -163,13 +178,6 @@ margin-right: 25px;
 
 
 
-
-
-
-
-
-
-/*-----------------------------------------------------------------------------*/
 .wraperVrap {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12 колонок */
@@ -178,56 +186,68 @@ margin-right: 25px;
   margin: 0 auto; /* Центрирование контейнера */
 }
 
-.banner {
-  grid-column: 1 / 5; /* С конца 1-й линии до начала 4-й линии */
-  display: flex; /* Вложенный флекс-контейнер для выравнивания */
-  justify-content: flex-start; /* Выравнивание содержимого по левому краю */
-  align-items: center; /* Центрирование по вертикали */
-  margin-top: 12px;
-  
-}
-
-.banner_title {
-  display: flex;
-  flex-direction: column; /* Расположение текста вертикально */
-}
-
-.title_banner_title {
-  font-family: Montserrat;
- 
-  font-size: 30px;
-  font-weight: 300;
 
 
-}
 
-.banner_title_text {
-  margin: 0;
+
+/*-----------------------------------------------------------------------------*/
+
+
+
+.videorpew {
+  position: relative;
   padding: 0;
-  font-family: Montserrat;
-font-size: 60px;
-font-weight: 700;
-line-height: 1;
-
-
+  margin: 0;
 }
 
+.video-bg {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 113%;
+  object-fit: cover;
+  z-index: -1; 
+}
 
+.contentVideos {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); 
+  grid-template-rows: auto auto; 
+  row-gap: 20px; 
+  gap: 16px; 
+  max-width: 1140px;
+  height: 860px; 
+  margin: 0 auto;
+  padding: 20px 50px; 
+  color: white;
+  z-index: 1; 
+}
 
+.contentVideos h1 {
+  grid-column: 1 / 12; 
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 100px;
+}
 
-
-
-
-
-
-
+.contentVideos p {
+  grid-column: 1 / 12; 
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.4; 
+}
 
 
 
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* Общий сброс стилей */
+
 
 .green-background {
   background: linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.8) 100%);
@@ -236,9 +256,8 @@ line-height: 1;
   display: flex;
   align-items: center; /* Центрирование по вертикали */
   justify-content: center; /* Центрирование по горизонтали */
-  margin-top: 560px;
+  margin-top: 12px;
 }
-
 
 
 .block {
@@ -507,6 +526,59 @@ box-shadow: 6px 6px 4px 0px #F2870540;
   margin-bottom: 30px; /* Базовый отступ между .num и следующим элементом */
 }
 
+
+
+.num p:hover {
+  animation: wiggle 0.5s ease forwards;
+  cursor: pointer;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.numFive:hover {
+  animation: wiggle 0.5s ease forwards;
+  cursor: pointer;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+
+
 .num::after {
   content: "";
   display: block;
@@ -622,7 +694,7 @@ line-height: 40px;
 
 
 .card {
-  width: 1140px;
+  max-width: 1140px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -698,7 +770,7 @@ line-height: 40px;
 
 .slider-secondary img {
   border-radius: 20px;
-  height: 110px;
+  height: auto;
   width: 100%; /* Изображения занимают ширину родителя */
   box-shadow: 6px 6px 4px 0 rgba(242, 135, 5, 0.25); /* Тень для изображения */
   object-fit: cover; /* Масштабирование изображения */
@@ -933,7 +1005,7 @@ line-height: 40px;
   justify-content: space-between;
   align-items: center;
   margin: 10px 0;
-  width: 530px; /* Соответствует ширине основного изображения */
+  width: 100%; /* Соответствует ширине основного изображения */
   position: relative;
 }
 
@@ -981,7 +1053,11 @@ line-height: 40px;
     height: 35px;
     font-size: 20px; /* Соответственно размер текста внутри */
   }
+
 }
+
+
+
 
 @media (max-width: 700px) {
   .slider-controls {
@@ -1044,14 +1120,15 @@ line-height: 40px;
 
 /**************************************************************************************************/
 .packageConteiner {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12 равных колонок */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: baseline;
   gap: 20px; /* Расстояние между колонками и строками */
   width: 100%;
   max-width: 1140px; /* Максимальная ширина контейнера */
   margin: 0 auto; /* Центрирование контейнера */
   padding: 20px; /* Внутренние отступы для эстетики */
-  padding-left: 100px;
   margin-top: 20px;
 }
 
@@ -1107,12 +1184,10 @@ button:hover {
 
 .button-4 {
   grid-column: 3 / 6;
-  margin-top: 90px;
 }
 
 .button-5 {
   grid-column: 7 / 10;
-  margin-top: 90px;
 }
 
 
@@ -1120,7 +1195,8 @@ button:hover {
 
 .bacgroundSection {
   background: linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.8) 100%);
-  height: 180px;
+  min-height: 180px;
+  max-height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1173,7 +1249,8 @@ button:hover {
 }
 
 .buttonMore button {
-  width: 347px;
+  min-width: 250px;
+  max-width: 347px;
   height: 60px;
   border-radius: 10px ;
   border: none;
@@ -1201,7 +1278,7 @@ button:hover {
   max-width: 1140px; /* Максимальная ширина контейнера */
   margin: 0 auto; /* Центрирование контейнера */
   padding-left: 55px;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .first {
@@ -1326,13 +1403,19 @@ button:hover {
   margin-top: 40px;
 }
 
-.extraCard p {
+.extraCard ul{
+ margin: 0 auto;
+ margin-left: 20px;
+ margin-bottom: 20px;
+}
+
+.extraCard li {
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
-  margin-top: 25px;
-  
+  margin-top: 10px;
+
 }
 
 /************************************************************************************************************************************/
@@ -1383,6 +1466,260 @@ button:hover {
 }
 
 /************************************************************************************************************/
+.bacgroundConsult{
+  margin-top: 170px;
+}
+.consultation{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 равных колонок */
+  gap: 20px; /* Расстояние между колонками и строками */
+  width: 100%;
+  max-width: 1140px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding-left: 55px;
+  margin-top: 30px;
+}
+
+
+
+
+.consultationText{
+  grid-column: 1 / 7; 
+}
+.consultationText p {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 31px;
+}
+
+.consultationAction {
+  grid-column: 8 / 13;
+}
+
+.consultationAction p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 23px;
+  margin-top: 10px;
+}
+
+
+.consultationBTH {
+  grid-column: 8 / 11; 
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.buttoConsultation button {
+  width: 347px;
+  height: 60px;
+  border-radius: 10px ;
+  border: none;
+  background-color: #048ABF;
+  color:  #FFFFFF;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 64px;
+  text-align: center;
+  cursor: pointer;
+}
+.buttoConsultation button:hover{
+  background-color: #858585;
+}
+
+
+/*********************************************************************************************************/
+
+.leasing {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); 
+  gap: 20px; 
+  width: 100%;
+  max-width: 1140px; 
+  margin: 0 auto; 
+  padding-left: 55px;
+  margin-top: 70px;
+}
+
+.leasing1 {
+  grid-column: 1 / 3; 
+  font-family: Montserrat;
+  font-size: 60px;
+  font-weight: 300;
+
+
+}
+
+.leasing2 {
+  grid-column: 1 / 6; 
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 40px;
+  margin-top: 20px;
+}
+
+.leasing3, .leasing4 {
+  grid-column: 1 / 11; 
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 39px;
+  margin-top: 20px;
+
+}
+
+/*****************************************************************************************************************/
+.logoLeasing {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); 
+  gap: 20px; 
+  width: 100%;
+  max-width: 1140px; 
+  margin: 0 auto; 
+  padding-left: 55px;
+  margin-top: 70px;
+}
+
+.logoLeasing img:nth-child(1) {
+  grid-column: 1 / 4; /* с 1 по 4 столбец */
+}
+
+.logoLeasing img:nth-child(2) {
+  grid-column: 5 / 8; /* с 6 по 8 столбец */
+}
+
+.logoLeasing img:nth-child(3) {
+  grid-column: 9 / 12; /* с 9 по 12 столбец */
+}
+
+.logoLeasing img:nth-child(4) {
+  grid-column: 1 / 4;
+  margin-top: 30px; /* второй ряд, те же столбцы */
+}
+
+.logoLeasing img:nth-child(5) {
+  grid-column: 5 / 8;
+  margin-top: 30px; 
+}
+
+.logoLeasing img:nth-child(6) {
+  grid-column: 9 / 12;
+  margin-top: 20px; 
+}
+
+.logoLeasing img:nth-child(7) {
+  grid-column: 1 / 4; 
+  margin-top: 30px; 
+}
+
+.logoLeasing img:nth-child(8) {
+  grid-column: 5 / 8;
+  margin-top: 30px; 
+}
+
+.logoLeasing img:nth-child(9) {
+  grid-column: 9 / 12;
+  margin-top: 30px; 
+}
+
+.logoLeasing img {
+  max-width: 250px;
+  height: auto; 
+  
+}
+
+/*********************************************************************************************************************************/
+
+
+
+
+
+.bacgroundOffer{
+  margin-top: 170px;
+}
+.limitedoffer{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 равных колонок */
+  gap: 20px; /* Расстояние между колонками и строками */
+  width: 100%;
+  max-width: 1140px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding-left: 55px;
+  margin-top: 30px;
+}
+
+
+.limitedofferText{
+  grid-column: 1 / 7; 
+  margin-top: 20px;
+}
+.limitedofferText p {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 31px;
+}
+
+.limitedofferAction {
+  grid-column: 8 / 13;
+}
+
+.limitedofferAction p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 23px;
+  padding-bottom: 10px;
+}
+
+
+.buttolimitedoffer {
+  grid-column: 9 / 12; 
+  text-align: center;
+  padding-bottom: 30px;
+
+}
+
+.buttolimitedoffer button {
+  width: 347px;
+  height: 60px;
+  border-radius: 10px ;
+  border: none;
+  background-color: #048ABF;
+  color:  #FFFFFF;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 64px;
+  text-align: center;
+  cursor: pointer;
+}
+.buttolimitedoffer button:hover{
+  background-color: #858585;
+}
+
+#countdown {
+  max-height: 42px;
+  font-size: 16px; 
+  font-family: Montserrat; 
+  font-weight: 700; 
+  padding: 10px;
+  margin-right: 11px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 10px; 
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.8); /* Белый с прозрачностью 80% */
+  box-shadow: 6px 6px 4px 0px #6f3e0140;
+  margin-bottom: 15px;
+
+}
+
+/*********************************************************************************************************************/
 
 
 
@@ -1390,6 +1727,48 @@ button:hover {
 
 
 
+.delivery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); 
+  gap: 20px; 
+  width: 100%;
+  max-width: 1140px; 
+  margin: 0 auto; 
+  padding-left: 55px;
+  margin-top: 70px;
+}
+
+.delivery1 {
+  grid-column: 1 / 3; 
+  font-family: Montserrat;
+  font-size: 60px;
+  font-weight: 300;
+ 
+
+
+}
+
+.delivery2 {
+  grid-column: 1 / 6; 
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 40px;
+  margin-top: 20px;
+}
+
+.delivery3, .delivery4 {
+  grid-column: 1 / 11; 
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 39px;
+  margin-top: 20px;
+
+}
+
+
+/*********************************************************************/
 
 
 
@@ -1397,30 +1776,199 @@ button:hover {
 
 
 
+.calculationDel{
+  margin-top: 170px;
+}
+.calculationDelivery{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 равных колонок */
+  gap: 20px; /* Расстояние между колонками и строками */
+  width: 100%;
+  max-width: 1140px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  padding-left: 55px;
+  margin-top: 30px;
+}
 
 
 
 
+.calculationDeliveryText{
+  grid-column: 1 / 7; 
+}
+.calculationDeliveryText p {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 31px;
+ 
+}
+
+.calculationDeliveryAction {
+  grid-column: 8 / 13;
+}
+
+.calculationDeliveryAction p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 23px;
+  padding-top: 10px;
+}
+
+
+.buttocalculationDelivery {
+  grid-column: 9 / 12; 
+  text-align: center;
+
+}
+
+.buttocalculationDelivery button {
+  width: 347px;
+  height: 60px;
+  border-radius: 10px ;
+  border: none;
+  background-color: #048ABF;
+  color:  #FFFFFF;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 64px;
+  text-align: center;
+  cursor: pointer;
+}
+.buttocalculationDelivery button:hover{
+  background-color: #858585;
+}
+
+/**********************************************************************************************/
 
 
 
 
+.aboutUs {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); 
+  gap: 20px; 
+  width: 100%;
+  max-width: 1140px; 
+  margin: 0 auto; 
+  padding-left: 55px;
+  margin-top: 70px;
+}
+
+.aboutUs1 {
+  grid-column: 1 / 5; 
+  font-family: Montserrat;
+  font-size: 60px;
+  font-weight: 300;
+ 
 
 
+}
+
+.aboutUs2 {
+  grid-column: 1 / 6; 
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 40px;
+  margin-top: 20px;
+}
+
+.aboutUs3 {
+  grid-column: 1 / 11; 
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 39px;
+  margin-top: 20px;
+
+}
+
+/*********************************************************/
 
 
+.biglogo {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 8 равных колонок */
+  gap: 20px; 
+  width: 100%;
+  max-width: 1140px; 
+  margin: 0 auto; 
+  padding-left: 55px;
+  margin-top: 70px;
+}
 
 
+.biglogo img {
+  grid-column: 3/ 7; /* Занимает с 2 по 6 колонку (5 колонок) */
+  max-width: 100%; /* Чтобы изображение не вылезало за границы */
+  height: auto; /* Сохраняет пропорции */
+}
+
+/*****************************************************************************************************************************/
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 500px; /* высота карты */
+  background-color: #eaeaea; /* резервный цвет */
+  margin-top: 70px;
+}
+
+.contactsFooter {
+  position: relative;
+  z-index: 1;
+  background: none; /* отключаем стандартный фон */
+}
+
+.contentFooter {
+  max-width: 650px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 50%; /* центрируем */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.contentFooter h2 {
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 39px;
+ color: #000000;
+ margin: 0;
+}
+.contacts-listFooter{
+  margin-top: 25px;
+}
+
+.contacts-listFooter li {
+  list-style-type: none;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+}
+.contacts-listFooter a {
+ 
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24.38px;
+  color: #2C2C2C;
+}
 
 
-
-
-
-
-
-
-
-
+.contacts-listFooter a:hover{
+  font-size: 17px;
+  color: #1b1b1b;
+}
 
 
 
@@ -1439,6 +1987,769 @@ button:hover {
 
 
 /* Адаптивность ----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/* Адаптация для экранов от 906px до 1200px */
+@media (max-width: 1200px) {
+  #map {
+    height: 400px; /* Уменьшаем высоту карты для средних экранов */
+    margin-top: 70px;
+  }
+  .contentFooter {
+    max-width: 90%;
+    top: 40%; /* Смещаем выше для корректного отображения */
+    transform: translate(-50%, -40%);
+    padding: 16px;
+    border-radius: 0;
+    border:none;
+    box-shadow: none;
+  }
+  .contentFooter h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .contacts-listFooter li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* Адаптация для экранов от 576px до 906px */
+@media (max-width: 906px) {
+  #map {
+    height: 300px; /* Ещё сильнее уменьшаем высоту карты */
+  }
+  .contentFooter {
+    max-width: 100%;
+    position: static; /* Убираем абсолютное позиционирование */
+    transform: none;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 12px;
+    
+    box-shadow: none; /* Убираем тени */
+    margin-top: 30px;
+  }
+  .contentFooter h2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 0;
+  }
+  .contacts-listFooter li {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+/* Адаптация для экранов меньше 576px */
+@media (max-width: 576px) {
+  #map {
+    height: 250px; /* Минимальная высота карты */
+  }
+  .contactsFooter {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 30px;
+    border-radius: 0;
+    border:none;
+    box-shadow: none;
+  }
+  .contentFooter {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    margin-top: 0;
+    background: #ffffff;
+    border-radius: 0;
+    border:none;
+    box-shadow: none;
+  }
+  .contentFooter h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .contacts-listFooter li {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .contacts-listFooter {
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Адаптив для планшетов (ширина до 768px) */
+@media (max-width: 768px) {
+  .biglogo {
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки для более узкого экрана */
+    padding-left: 20px; /* Уменьшение отступов */
+    padding-right: 20px;
+    gap: 15px;
+  }
+
+  .biglogo img {
+    grid-column: 1 / 5; /* Изображение занимает всю ширину сетки */
+  }
+}
+
+/* Адаптив для мобильных устройств (ширина до 480px) */
+@media (max-width: 480px) {
+  .biglogo {
+    grid-template-columns: 1fr; /* 1 колонка для мобильных устройств */
+    padding-left: 20px; /* Уменьшение отступов */
+    padding-right: 20px;
+    gap: 10px;
+  }
+
+  .biglogo img {
+    grid-column: 1 / -1; /* Занимает всю доступную ширину */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Адаптация для планшетов (максимальная ширина экрана 768px) */
+@media (max-width: 768px) {
+  .aboutUs {
+    grid-template-columns: 1fr; /* Один столбец */
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+  }
+
+  .aboutUs1 {
+    font-size: 40px; /* Уменьшаем размер текста */
+    grid-column: 1 / -1; /* Растянуть на всю ширину */
+  }
+
+  .aboutUs2 {
+    font-size: 24px; /* Уменьшаем размер текста */
+    line-height: 32px;
+    grid-column: 1 / -1;
+  }
+
+  .aboutUs3 {
+    font-size: 18px;
+    line-height: 28px;
+    grid-column: 1 / -1;
+  }
+}
+
+/* Адаптация для мобильных устройств (максимальная ширина экрана 480px) */
+@media (max-width: 480px) {
+  .aboutUs {
+    gap: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+  }
+
+  .aboutUs1 {
+    font-size: 30px; /* Ещё меньше размер текста */
+  }
+
+  .aboutUs2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .aboutUs3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .calculationDelivery {
+    grid-template-columns: 1fr; /* Однофрагментная колонка */
+    gap: 15px; /* Меньше расстояние между элементами */
+    padding-left: 20px; /* Уменьшаем отступ */
+    margin: 0;
+  }
+
+  .calculationDeliveryText {
+    grid-column: 1 / -1; /* Элемент на всю ширину */
+    text-align: center; /* Центрируем содержимое */
+  }
+
+  .calculationDeliveryText p {
+    font-size: 20px; /* Уменьшаем шрифт */
+    line-height: 28px; /* Уменьшаем высоту строки */
+  }
+
+  .calculationDeliveryAction {
+    grid-column: 1 / -1; /* Элемент на всю ширину */
+    text-align: center; /* Центрируем содержимое */
+  }
+
+  .calculationDeliveryAction p {
+    font-size: 16px; /* Уменьшаем размер текста */
+    line-height: 22px; /* Уменьшаем высоту строки */
+  }
+
+  .buttocalculationDelivery {
+    grid-column: 1 / -1; /* Элемент на всю ширину */
+    text-align: center; /* Центрируем содержимое */
+  }
+
+  .buttocalculationDelivery button {
+    width: 100%; /* Кнопка на всю ширину */
+    max-width: 300px; /* Максимальная ширина кнопки */
+    height: 50px; /* Уменьшаем высоту кнопки */
+    font-size: 18px; /* Уменьшаем размер шрифта */
+    line-height: 50px; /* Центрируем текст */
+  }
+}
+
+@media (max-width: 768px) {
+  .calculationDelivery {
+    gap: 10px; /* Уменьшаем расстояние между элементами */
+    padding: 10px; /* Увеличиваем внутренний отступ */
+    margin: 0;
+  }
+
+  .calculationDeliveryText p {
+    font-size: 18px; /* Еще меньше размер текста */
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .calculationDeliveryAction p {
+    font-size: 18px; /* Уменьшаем текст */
+    line-height: 20px;
+  }
+
+  .buttocalculationDelivery button {
+    height: 45px; /* Еще меньше высота кнопки */
+    font-size: 16px; /* Уменьшаем текст */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Адаптация для планшетов (максимальная ширина экрана 768px) */
+@media (max-width: 768px) {
+  .delivery {
+    grid-template-columns: 1fr; /* Один столбец */
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+  }
+
+  .delivery1 {
+    font-size: 40px; /* Уменьшаем размер текста */
+    grid-column: 1 / -1; /* Растянуть на всю ширину */
+  }
+
+  .delivery2 {
+    font-size: 24px;
+    line-height: 32px;
+    grid-column: 1 / -1;
+  }
+
+  .delivery3,
+  .delivery4 {
+    font-size: 18px;
+    line-height: 28px;
+    grid-column: 1 / -1;
+  }
+}
+
+/* Адаптация для мобильных устройств (максимальная ширина экрана 480px) */
+@media (max-width: 480px) {
+  .delivery {
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+  }
+
+  .delivery1 {
+    font-size: 30px; /* Ещё меньше размер текста */
+  }
+
+  .delivery2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .delivery3,
+  .delivery4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .limitedoffer {
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 15px; /* Меньше расстояние между элементами */
+    padding-left: 20px; /* Уменьшаем отступ */
+    margin: 0;
+  }
+
+  .limitedofferText {
+    grid-column: 1 / -1; /* Элемент на всю ширину */
+    text-align: center; /* Центрируем текст */
+  }
+
+  .limitedofferText p {
+    font-size: 20px; /* Уменьшаем шрифт */
+    line-height: 28px; /* Уменьшаем высоту строки */
+  }
+
+  .limitedofferAction {
+    grid-column: 1 / -1; /* Элемент на всю ширину */
+    text-align: center; /* Центрируем содержимое */
+  }
+
+  .limitedofferAction p {
+    font-size: 18px; /* Уменьшаем размер текста */
+    line-height: 22px; /* Уменьшаем высоту строки */
+  }
+
+  .buttolimitedoffer {
+    grid-column: 1 / -1; /* Элемент на всю ширину */
+    text-align: center; /* Центрируем содержимое */
+  }
+
+  .buttolimitedoffer button {
+    width: 100%; /* Кнопка на всю ширину */
+    max-width: 300px; /* Максимальная ширина кнопки */
+    height: 50px; /* Уменьшаем высоту кнопки */
+    font-size: 18px; /* Уменьшаем размер шрифта */
+    line-height: 50px; /* Центрируем текст */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .limitedoffer {
+    gap: 10px; /* Уменьшаем расстояние между элементами */
+    padding: 10px; /* Увеличиваем внутренний отступ */
+    margin: 0;
+  }
+
+  .limitedofferText p {
+    font-size: 16px; /* Еще меньше размер текста */
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .limitedofferAction p {
+    font-size: 18px; /* Уменьшаем текст */
+    line-height: 20px;
+  }
+
+  .buttolimitedoffer button {
+    height: 45px; /* Еще меньше высота кнопки */
+    font-size: 16px; /* Уменьшаем текст */
+  }
+  #countdown{
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 700; 
+    margin-right: 10px;
+ 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+  .logoLeasing {
+    grid-template-columns: repeat(4, 1fr); /* Две картинки в ряд */
+    gap: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .logoLeasing img {
+    max-width: 200px;
+  }
+
+  .logoLeasing img:nth-child(1) { grid-column: 1 / 3; }
+  .logoLeasing img:nth-child(2) { grid-column: 3 / 5; }
+  .logoLeasing img:nth-child(3) { grid-column: 1 / 3; margin-top: 20px; }
+  .logoLeasing img:nth-child(4) { grid-column: 3 / 5; margin-top: 20px; }
+  .logoLeasing img:nth-child(5) { grid-column: 1 / 3; margin-top: 20px; }
+  .logoLeasing img:nth-child(6) { grid-column: 3 / 5; margin-top: 20px; }
+  .logoLeasing img:nth-child(7) { grid-column: 1 / 3; margin-top: 20px; }
+  .logoLeasing img:nth-child(8) { grid-column: 3 / 5; margin-top: 20px; }
+  .logoLeasing img:nth-child(9) {
+    grid-column: 2 / 4; /* Занимает место по центру */
+    margin-top: 20px;
+  }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  .logoLeasing {
+    grid-template-columns: repeat(2, 1fr); /* Две картинки в ряд */
+    gap: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .logoLeasing img {
+    max-width: 150px;
+  }
+
+  .logoLeasing img:nth-child(1) { grid-column: 1 / 2; }
+  .logoLeasing img:nth-child(2) { grid-column: 2 / 3; }
+  .logoLeasing img:nth-child(3) { grid-column: 1 / 2; margin-top: 10px; }
+  .logoLeasing img:nth-child(4) { grid-column: 2 / 3; margin-top: 10px; }
+  .logoLeasing img:nth-child(5) { grid-column: 1 / 2; margin-top: 10px; }
+  .logoLeasing img:nth-child(6) { grid-column: 2 / 3; margin-top: 10px; }
+  .logoLeasing img:nth-child(7) { grid-column: 1 / 2; margin-top: 10px; }
+  .logoLeasing img:nth-child(8) { grid-column: 2 / 3; margin-top: 10px; }
+  .logoLeasing img:nth-child(9) {
+    grid-column: 1 / 3; /* Занимает всю ширину */
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .leasing {
+    grid-template-columns: 1fr; /* Один столбец */
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+  }
+
+  .leasing1 {
+    font-size: 40px; /* Уменьшаем размер текста */
+    grid-column: 1 / -1; /* Растянуть на всю ширину */
+  }
+
+  .leasing2 {
+    font-size: 24px;
+    line-height: 32px;
+    grid-column: 1 / -1;
+  }
+
+  .leasing3, .leasing4 {
+    font-size: 18px;
+    line-height: 28px;
+    grid-column: 1 / -1;
+  }
+}
+
+/* Адаптация для мобильных устройств (ширина экрана до 480px) */
+@media (max-width: 480px) {
+  .leasing {
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+  }
+
+  .leasing1 {
+    font-size: 30px; /* Ещё меньше размер текста */
+  }
+
+  .leasing2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .leasing3, .leasing4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  .consultation {
+    grid-template-columns: 1fr; /* Однофрагментная колонка */
+    gap: 15px; /* Меньше расстояние между элементами */
+    padding-left: 20px; /* Уменьшаем отступ */
+    margin: 0;
+  }
+
+  .consultationText {
+    grid-column: 1 / -1; /* Элемент на всю ширину */
+  }
+
+  .consultationText p {
+    font-size: 20px; /* Уменьшаем шрифт */
+    line-height: 28px; /* Уменьшаем высоту строки */
+    text-align: center; /* Центрируем текст */
+  }
+
+  .consultationAction {
+    grid-column: 1 / -1; /* Элемент на всю ширину */
+    text-align: center; /* Центрируем содержимое */
+  }
+
+  .consultationAction p {
+    font-size: 16px; /* Уменьшаем размер текста */
+    line-height: 22px; /* Уменьшаем высоту строки */
+  }
+
+  .consultationBTH {
+    grid-column: 1 / -1; /* Элемент на всю ширину */
+    text-align: center; /* Центрируем содержимое */
+  }
+
+  .buttoConsultation button {
+    width: 100%; /* Кнопка на всю ширину */
+    max-width: 300px; /* Максимальная ширина кнопки */
+    height: 50px; /* Уменьшаем высоту кнопки */
+    font-size: 18px; /* Уменьшаем размер шрифта */
+    line-height: 50px; /* Центрируем текст */
+  }
+}
+
+@media (max-width: 768px) {
+  .consultation {
+    gap: 10px; /* Уменьшаем расстояние между элементами */
+    padding: 10px; /* Увеличиваем внутренний отступ */
+    margin: 0;
+  }
+
+  .consultationText p {
+    font-size: 18px; /* Еще меньше размер текста */
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .consultationAction p {
+    font-size: 18px; /* Уменьшаем текст */
+    line-height: 20px;
+  }
+
+  .buttoConsultation button {
+    height: 45px; /* Еще меньше высота кнопки */
+    font-size: 16px; /* Уменьшаем текст */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1477,6 +2788,23 @@ button:hover {
     line-height: 24px;
   }
 }
+
+@media (max-width: 900px) {
+  .extraCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .extraCard ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+
+
 
 @media (max-width: 768px) {
    .extra {
@@ -1603,6 +2931,7 @@ button:hover {
     gap: 20px; /* Расстояние между элементами */
     margin-top: 0; /* Убираем отступ сверху */
     padding: 0;
+    margin-top: 25px;
   }
 
   .more1, .more2 {
@@ -1618,7 +2947,7 @@ button:hover {
 
   .more2 p {
     padding: 0;
-    font-size: 14px; /* Уменьшаем размер текста */
+    font-size: 18px; /* Уменьшаем размер текста */
     
   }
 
@@ -1688,7 +3017,7 @@ button:hover {
   }
 
   .dropdown-menu {
-    width: 90%;
+    width: 100%;
     right: 5%;
   }
 }
@@ -2139,14 +3468,36 @@ button:hover {
 
 
 
+@media (min-width: 900px) and (max-width: 1140px) {
+  /* Стили для экранов шириной от 768px до 1024px */
+  .card {
+    max-width: 1140px;
+  }
+
+  .slider  img {
+    width: 100%; /* Заполняет ширину блока */
+    height: auto; /* Сохраняет пропорции */
+    object-fit: cover; /* Обрезает изображение, чтобы заполнить блок, если нужно */
+  }
+}
 
 
+@media (max-width: 1010px) {
+ .numFive {
+  visibility: collapse;
+ }
 
+ .point5 {
+  margin-top: 0;
+  align-items: center;
+ }
 
+ .textFive {
+  padding-bottom: 0;
+ }
 
-
-
-
-
-
+ .bth5 {
+  margin-top: 0;
+ }
+}
 
