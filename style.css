@@ -104,6 +104,76 @@ margin-right: 25px;
 }
 
 
+
+
+.nav a::after , .contact a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Расположение линии под текстом */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2C2C2C;
+  transition: width 0.3s ease-in-out; /* Анимация появления линии */
+}
+
+.nav a:hover::after , .contact a:hover::after{
+  width: 100%; /* Линия подчеркивания полностью растягивается */
+}
+
+.nav a::before, .contact a::before{
+  position: absolute;
+  bottom: -24px; /* Расположение текста под основным */
+  left: 0;
+  font-size: 14px; /* Размер текста под основным */
+  color: rgba(211, 206, 206, 0); /* Прозрачный текст по умолчанию */
+  white-space: nowrap; /* Отключение переноса текста */
+  transition: color 0.3s ease-in-out; /* Плавное появление текста */
+}
+
+.nav a:hover::before , .contact a:hover::before{
+  color: #2C2C2C; /* Текст становится видимым при наведении */
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav a,.contact a {
+  animation: fadeInFromTop 0.5s ease-in-out forwards;
+}
+
+.nav a:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.nav a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.nav a:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.nav a:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+
+
+
+
+
+
+
+
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .mobile-menu {
   display: none;
@@ -202,10 +272,10 @@ margin-right: 25px;
 
 .video-bg {
   position: absolute;
-  top: -100px;
+  top: -120px;
   left: 0;
   width: 100%;
-  height: 113%;
+  height: 116.1%;
   object-fit: cover;
   z-index: -1; 
 }
@@ -225,7 +295,7 @@ margin-right: 25px;
 }
 
 .contentVideos h1 {
-  grid-column: 1 / 12; 
+  grid-column: 1 / 13; 
   margin: 0;
   font-family: Montserrat;
   font-size: 48px;
@@ -234,13 +304,123 @@ margin-right: 25px;
 }
 
 .contentVideos p {
-  grid-column: 1 / 12; 
+  grid-column: 1 / 13; 
   margin: 0;
   font-family: Montserrat;
-  font-size: 32px;
+  font-size: 31px;
   font-weight: 300;
   line-height: 1.4; 
 }
+
+.footnote {
+  grid-column: 1 / -1;
+  display: flex;
+  grid-gap: 20px; /* отступы между элементами */
+  padding: 20px 0;
+  color: white;
+}
+
+.subtitle {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.subtitle div {
+  line-height: 60px;
+  top: 30px;
+  display: flex;
+  vertical-align: text-top;
+  font-size: 24px;
+}
+
+
+.subtitle div:nth-of-type(1) {
+  font-weight: 200;
+  font-size: 30px; /* Размер шрифта для второго <p> */
+}
+
+.subtitle div:nth-of-type(2) {
+  color: #FFFFFF;
+  font-size: 60px; /* Размер шрифта для второго <p> */
+  font-weight: 900;
+  line-height: 40px !important;
+}
+
+.subtitle div:nth-of-type(3) {
+  font-size: 20px; /* Размер шрифта для второго <p> */
+  font-weight: 200;
+}
+
+
+.zero {
+  align-self: flex-start;
+  font-size: 60px; /* Размер шрифта для второго <p> */
+}
+
+
+.lizing-container {
+gap: 10px;
+display: flex;
+flex-direction: row;
+}
+
+.from {
+  color: white;
+  display: flex;
+  align-self: start;
+  line-height: 18px !important;
+}
+
+
+
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); /* Элемент вне экрана слева */
+    opacity: 0; /* Прозрачный */
+  }
+  100% {
+    transform: translateX(0); /* На своем месте */
+    opacity: 1; /* Полностью видимый */
+  }
+}
+
+.contentVideos {
+  animation: slideInLeft 1.5s ease-in-out; /* Анимация для всего блока */
+  animation-fill-mode: forwards; /* Сохраняем конечное состояние */
+}
+
+.contentVideos h1 {
+  animation: slideInLeft 1.5s ease-in-out;
+  animation-delay: 0.2s; /* Задержка для заголовка */
+  animation-fill-mode: forwards;
+}
+
+.contentVideos p {
+  animation: slideInLeft 1.5s ease-in-out;
+  animation-delay: 0.4s; /* Задержка для текста */
+  animation-fill-mode: forwards;
+}
+
+.contentVideos .footnote .subtitle {
+  animation: slideInLeft 1.5s ease-in-out;
+  animation-delay: 0.6s; /* Задержка для подзаголовков */
+  animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -256,7 +436,7 @@ margin-right: 25px;
   display: flex;
   align-items: center; /* Центрирование по вертикали */
   justify-content: center; /* Центрирование по горизонтали */
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
 
@@ -326,6 +506,10 @@ color:  #000000;
 line-height: 1.9;
 
 }
+
+
+
+
 
 
 
@@ -1147,13 +1331,11 @@ line-height: 40px;
   align-items: center;
 }
 
-.packageConteiner button {
-  width: 326px;
-  height: 213px;
+.packageConteiner img {
+  max-width: 300px;
+  height: auto;
   border-color:#D9D9D9 ;
-  background: #D9D9D9;
   border-radius: 20px;
-  opacity: 0.5; 
   transition: background 0.3s ease;
 }
 
@@ -1309,6 +1491,29 @@ button:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Адаптация для планшетов */
 @media (max-width: 768px) {
   .retrofitting {
@@ -1439,8 +1644,6 @@ button:hover {
 
 .popup-content {
   background: #fff;
-  padding: 20px;
-  border-radius: 8px;
   text-align: center;
   position: relative;
   max-width: 400px;
@@ -1467,7 +1670,7 @@ button:hover {
 
 /************************************************************************************************************/
 .bacgroundConsult{
-  margin-top: 170px;
+  margin-top: 120px;
 }
 .consultation{
   display: grid;
@@ -1542,6 +1745,7 @@ button:hover {
   margin: 0 auto; 
   padding-left: 55px;
   margin-top: 70px;
+  
 }
 
 .leasing1 {
@@ -1571,6 +1775,36 @@ button:hover {
   margin-top: 20px;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*****************************************************************************************************************/
 .logoLeasing {
@@ -1702,6 +1936,24 @@ button:hover {
   background-color: #858585;
 }
 
+@keyframes shake {
+  0% {
+    transform: translateX(0); /* Начальное положение */
+  }
+  25% {
+    transform: translateX(-3px); /* Движение влево */
+  }
+  50% {
+    transform: translateX(3px); /* Движение вправо */
+  }
+  75% {
+    transform: translateX(-3px); /* Снова влево */
+  }
+  100% {
+    transform: translateX(0); /* Возвращение в исходное положение */
+  }
+}
+
 #countdown {
   max-height: 42px;
   font-size: 16px; 
@@ -1713,12 +1965,11 @@ button:hover {
   display: inline-block;
   border-radius: 10px; 
   color: #000000;
-  background-color: rgba(255, 255, 255, 0.8); /* Белый с прозрачностью 80% */
+  background-color: rgba(255, 255, 255, 0.8); 
   box-shadow: 6px 6px 4px 0px #6f3e0140;
   margin-bottom: 15px;
-
+  animation: shake 1s ease-in-out infinite; 
 }
-
 /*********************************************************************************************************************/
 
 
@@ -1966,7 +2217,7 @@ button:hover {
 
 
 .contacts-listFooter a:hover{
-  font-size: 17px;
+  font-size: 15px;
   color: #1b1b1b;
 }
 
@@ -3479,6 +3730,11 @@ button:hover {
     height: auto; /* Сохраняет пропорции */
     object-fit: cover; /* Обрезает изображение, чтобы заполнить блок, если нужно */
   }
+
+  .bacgroundConsult {
+    margin-top: 50px;
+  }
+  
 }
 
 
@@ -3501,3 +3757,160 @@ button:hover {
  }
 }
 
+
+@media (max-width: 771px) {
+  .green-background {
+    margin-top: 0;
+  }
+
+  .footnote {
+    display: none
+  }
+
+
+  .contentVideos {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    height: 620px;
+  }
+
+  .contentVideos h1{
+    margin-top: 30px;
+    font-size: 36px;
+  }
+
+  .contentVideos p{
+    font-size: 24px;
+  }
+
+  .video-bg {
+    height: 119.5%;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .contentVideos h1{
+    font-size: 30px;
+  }
+
+  .contentVideos p{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 535px) {
+.packageConteiner button{
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.contentFooter {
+  border: 1px solid #F2C166;
+  border-radius: 8px;
+}
+
+
+}
+
+
+@media (max-width: 656px) {
+.packageConteiner img {
+  max-width: 100%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.justifidPop {
+  max-width: 335px;
+   height: auto;
+   position: fixed;
+   top: 50px;
+   right: 160px; /* Позиционируем попап слева */
+   padding: 10px;
+   background-color: #FFFFFF;
+   box-shadow: 6px 6px 4px 0px #F2870540;
+   color: #000000;
+   border-radius: 5px;
+   visibility: hidden; /* Скрытие по умолчанию */
+   font-family: Montserrat;
+   font-size: 18px;
+   font-weight: 300;
+   z-index: 1000;
+   transition: opacity 0.5s ease, visibility 0.5s ease; /* Плавный переход для visibility */
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   align-items: center;
+   display: flex;
+ }
+ 
+ .justifidPop.show {
+   visibility: visible; /* Сделать видимым */
+   opacity: 1;
+ }
+ 
+ .justifidPop img {
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+ }
+ 
+ .justifidPopText {
+   flex: 1;
+   padding-left: 10px;
+ }
+ 
+ /* Адаптивные стили */
+ /* Для планшетов */
+ @media (min-width: 769px) and (max-width: 1024px) {
+   .justifidPop {
+     max-width: 335px;/* Уменьшаем ширину попапа на планшетах */
+       top: 15px; /* Немного увеличиваем отступ сверху */
+       left: 10%; /* Оставляем отступ с левой стороны */
+       font-size: 16px; /* Уменьшаем шрифт */
+   }
+ }
+ 
+ /* Для десктопов */
+ @media (min-width: 1025px) {
+   .justifidPop {
+       max-width: 335px; /* Ширина попапа на компьютерах */
+       font-size: 18px; /* Оставляем шрифт таким же */
+   }
+ }
+ 
+ /* Скрываем попап для мобильных устройств */
+ @media (max-width: 768px) {
+   .justifidPop {
+       display: none; /* Скрываем попап на мобильных */
+   }
+ }
+ 
