@@ -70,7 +70,6 @@ body {
 }
 
 .nav a:hover {
-  font-size: 22px;
   color:#1a1919;
 }
 
@@ -99,7 +98,6 @@ margin-right: 25px;
 }
 
 .contact a:hover{
-  font-size: 22px;
   color:#1a1919;
 }
 
@@ -328,7 +326,7 @@ margin-right: 25px;
 
 
 .subtitle div {
-  line-height: 60px;
+  line-height: 45px;
   top: 30px;
   display: flex;
   vertical-align: text-top;
@@ -372,6 +370,17 @@ flex-direction: row;
   align-self: start;
   line-height: 18px !important;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -450,7 +459,6 @@ flex-direction: row;
   grid-column: 1 / 8; /* С 1 до 7 линии */
   text-align: left;
   color: white; /* Белый текст на зеленом фоне */
-  margin-top: 17px;
   line-height: 1;
 }
 
@@ -498,12 +506,13 @@ color:  #000000;
 }
 
 .button-block p {
-  
-  font-family: Montserrat;
+font-family: Montserrat;
 font-size: 18px;
 font-weight: 300;
 color:  #000000;
-line-height: 1.9;
+text-align: left;
+line-height: 1.4;
+
 
 }
 
@@ -646,7 +655,7 @@ box-shadow: 6px 6px 4px 0px #F2870540;
   align-items: flex-start;
 }
 .text h1{
-  margin-top: 0;
+  margin-top: 40px;
   font-family: Montserrat;
   font-size: 36px;
   font-weight: 900;
@@ -696,7 +705,7 @@ box-shadow: 6px 6px 4px 0px #F2870540;
   margin: 0 auto; /* Центрирование контейнера */
   padding: 20px; /* Внутренние отступы для эстетики */
   padding-left: 55px;
-  margin-top: 30px;
+  margin-top: 70px;
   position: relative; /* Устанавливает контекст для абсолютного позиционирования */
   overflow: visible;
 }
@@ -785,13 +794,12 @@ box-shadow: 6px 6px 4px 0px #F2870540;
 
 .formFive {
   display: grid;
-  grid-column: 9 / 12; 
+  grid-column: 9 / 13; 
   
 }
 
 .bth5 {
   max-width: 347px;
-  margin-top: 40px;
   height: 60px;
   text-align: center;
   cursor: pointer;
@@ -807,7 +815,7 @@ box-shadow: 6px 6px 4px 0px #F2870540;
   display: flex;
   align-items: center; /* Центрирование по вертикали */
   justify-content: center; /* Центрирование по горизонтали */
-  margin-top: 170px;
+  margin-top: 190px;
   }
   
   
@@ -819,7 +827,7 @@ box-shadow: 6px 6px 4px 0px #F2870540;
   text-decoration-skip-ink: none;
   position: absolute; /* Позволяет точно позиционировать элемент */
   right: 35px; /* Отступ от правого края */
-  bottom: 230px;
+  bottom: 270px;
  
 
 }  
@@ -870,7 +878,7 @@ line-height: 40px;
   display: grid;
   grid-column: 1 / 4; 
   font-family: Montserrat;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 300;
 
 
@@ -1055,7 +1063,7 @@ line-height: 40px;
   padding: 10px; /* Отступы внутри блока */
   box-sizing: border-box; /* Учитываем отступы в ширине */
   text-align: center; /* Центрируем текст */
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .warranity p {
@@ -1346,9 +1354,10 @@ button:hover {
 .packageConteiner p {
   font-family: Montserrat;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 28px;
-  padding-top: 45px;
+  padding-top: 10px;
+  padding-bottom: 15px;
 
 }
 
@@ -1374,7 +1383,6 @@ button:hover {
 
 
 /***********************************************************************/
-
 .bacgroundSection {
   background: linear-gradient(180deg, rgba(242, 193, 102, 0.9) 0%, rgba(242, 193, 102, 0.8) 100%);
   min-height: 180px;
@@ -1384,60 +1392,54 @@ button:hover {
   align-items: center;
 }
 
-.sectionMore{
+.sectionMore {
   display: grid;
   grid-template-columns: repeat(12, 1fr); /* 12 равных колонок */
-  gap: 20px; /* Расстояние между колонками и строками */
+  gap: 20px; /* Расстояние между колонками */
   width: 100%;
   max-width: 1140px; /* Максимальная ширина контейнера */
-  margin: 0 auto; /* Центрирование контейнера */
-  padding-left: 55px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-left: 50px;
+  padding-bottom: 5px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-
-
-
-.more1{
-  grid-column: 1 / 6; /* С 1 по 5 грид-столбцы */
+.more1 {
+  grid-column: 1 / 8; /* С 1 по 6 грид-столбцы */
 }
+
 .more1 p {
-  margin-top: 40px;
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 800;
-  line-height: 31px;
+  margin-bottom: 0;
+
 }
 
-.more2 {
-  grid-column: 8 / 13;
-}
 
-.more2 p {
+
+.more2  {
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 200;
-  line-height: 23px;
-  padding-bottom: 15px;
+  
 }
 
-
-
-
 .buttonMore {
-  grid-column: 8 / 11; /* С 8 по 10 грид-столбцы */
-  text-align: center;
-  padding-bottom: 30px;
+  grid-row: 1 / 2; /* На первой строке */
+  grid-column: 9 / 13; /* С 7 по 12 столбцы */
+  margin-top: 0; /* Убираем лишние отступы */
 }
 
 .buttonMore button {
-  min-width: 250px;
-  max-width: 347px;
+  width: 100%; /* Растянуть кнопку на всю ширину родителя */
   height: 60px;
-  border-radius: 10px ;
+  border-radius: 10px;
   border: none;
   background-color: #048ABF;
-  color:  #FFFFFF;
+  color: #FFFFFF;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 900;
@@ -1445,7 +1447,8 @@ button:hover {
   text-align: center;
   cursor: pointer;
 }
-.buttonMore button:hover{
+
+.buttonMore button:hover {
   background-color: #858585;
 }
 
@@ -1711,7 +1714,7 @@ button:hover {
 
 .consultationBTH {
   grid-column: 8 / 11; 
-  text-align: center;
+
   padding-bottom: 30px;
 }
 
@@ -3140,7 +3143,6 @@ button:hover {
 
 
 
-
 @media (max-width: 1024px) {
   .bacgroundSection {
     padding: 12px; /* Увеличиваем отступы */
@@ -3151,7 +3153,7 @@ button:hover {
     line-height: 28px;
   }
 
-  .more2 p {
+  .more2  {
     font-size: 16px; /* Уменьшаем шрифт описания */
     line-height: 22px;
   }
@@ -3171,6 +3173,7 @@ button:hover {
     flex-direction: column; /* Элементы располагаются в одну колонку */
     align-items: center; /* Центрируем элементы по горизонтали */
     text-align: center; /* Центрируем текст */
+    margin: 0 auto;
   }
 
   .sectionMore {
@@ -3179,10 +3182,12 @@ button:hover {
     flex-direction: column; /* Располагаем элементы вертикально */
     align-items: center; /* Центрируем содержимое */
     text-align: center; /* Текст по центру */
-    gap: 20px; /* Расстояние между элементами */
-    margin-top: 0; /* Убираем отступ сверху */
+    gap: 10px; /* Расстояние между элементами */
+    margin: 0 auto; /* Убираем отступ сверху */
     padding: 0;
-    margin-top: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
   }
 
   .more1, .more2 {
@@ -3191,14 +3196,15 @@ button:hover {
   }
 
   .more1 p {
-    font-size: 18px; /* Уменьшаем размер текста */
+    font-size: 20px; /* Уменьшаем размер текста */
     line-height: 24px;
     margin: 0;
   }
 
-  .more2 p {
+  .more2  {
     padding: 0;
-    font-size: 18px; /* Уменьшаем размер текста */
+    font-size: 14px; 
+    
     
   }
 
@@ -3207,7 +3213,7 @@ button:hover {
     display: flex;
     justify-content: center; /* Центрируем кнопку */
     align-items: center;
-    padding-top: 10px;
+   
   }
 
   .buttonMore button {
@@ -3218,7 +3224,6 @@ button:hover {
     line-height: 50px; /* Центрирование текста */
   }
 }
-
 
 
 
@@ -3427,6 +3432,7 @@ button:hover {
     grid-template-columns: 1fr; /* Одна колонка */
     gap: 20px; /* Расстояние между элементами */
     text-align: center; /* Центрирование текста */
+
   }
 
   .numFive {
@@ -3502,7 +3508,7 @@ button:hover {
   padding: 0;
     padding-left: 12px;
     padding-right: 12px;
-    padding-bottom: 50px;
+    padding-bottom: 75px;
 }
   .num p {
     font-size: 80px; /* Уменьшаем размер текста */
@@ -3758,7 +3764,7 @@ button:hover {
 }
 
 
-@media (max-width: 771px) {
+@media (max-width: 950px) {
   .green-background {
     margin-top: 0;
   }
